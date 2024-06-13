@@ -19,4 +19,4 @@
 “Wir müssen wissen. Wir werden wissen." (_We must know_. _We will know_.)---David Hilbert
 
 # Contact me
-This is my school email:renxuyi@grinnell.edu 
+This is my school email: renxuyi@grinnell.edu 

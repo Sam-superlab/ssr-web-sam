@@ -13,6 +13,7 @@
 - [[Mainfolder/IBDP-Mathematics/Functions\|Functions]]
 - [[Mainfolder/IBDP-Mathematics/Derivatives\|Derivatives]]
 - [[Mainfolder/IBDP-Mathematics/Integration of functions\|Integration of functions]]  
+- [[Mainfolder/IBDP-Mathematics/parametric equations and polar coordinates\|parametric equations and polar coordinates]]
 ## Algebra
-
+[[Mainfolder/IBDP-Mathematics/Linear-Algebra\|Linear-Algebra]] 
 ## Topology and Geometry

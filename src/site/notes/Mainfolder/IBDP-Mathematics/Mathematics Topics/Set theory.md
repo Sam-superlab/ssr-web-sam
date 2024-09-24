@@ -68,7 +68,7 @@
 - **Element**: If $a$ is an object, we say $a$ is an **element** of a set $A$ if $a$ belongs to the set. This is denoted as $a \in A$.
 - **Subset**: A set $A$ is called a **subset** of another set $B$ if every element of $A$ is also an element of $B$. This is denoted as $A \subseteq B$.
 
-### Example:
+ Example:
 Let $A = \{1, 2, 3\}$ and $B = \{1, 2, 3, 4, 5\}$. Since every element of $A$ is also in $B$, we say $A$ is a subset of $B$: $A \subseteq B$.
 
 ### Empty Set
@@ -113,7 +113,7 @@ A \subseteq B
 $$
 - **Proper Subset**: $A$ is a proper subset of $B$, written $A \subset B$, if $A$ is a subset of $B$ but $A \neq B$.
 
-### Example:
+ Example:
 If $A = \{1, 2\}$ and $B = \{1, 2, 3\}$, then $A \subseteq B$ because all elements of $A$ are in $B$. However, $A \neq B$, so $A \subset B$ (proper subset).
 
 ---
@@ -128,7 +128,7 @@ If $A = \{1, 2\}$ and $B = \{1, 2, 3\}$, then $A \subseteq B$ because all elemen
 - **Complement** ($A^c$): The set of elements not in $A$, but in the universal set $U$.
 - **Difference** ($A - B$): The set of elements in $A$ but not in $B$.
 
-### Example:
+ Example:
 If $A = \{1, 2, 3\}$ and $B = \{3, 4, 5\}$:
 - $A \cup B = \{1, 2, 3, 4, 5\}$ (union)
 - $A \cap B = \{3\}$ (intersection)
@@ -138,7 +138,7 @@ Venn diagrams provide an intuitive way to visualize these set operations.
 
 # Operations on Sets
 
-## Union ( ∪ )
+### Union ( ∪ )
 - **Union** of two sets $A$ and $B$ is the set of elements that are in either $A$ or $B$, or in both. The union operation is denoted by $A \cup B$.
 $$
 A \cup B = \{x \mid x \in A \text{ or } x \in B\}
@@ -150,7 +150,7 @@ $$
 
 ---
 
-## Intersection ( ∩ )
+### Intersection ( ∩ )
 - **Intersection** of two sets $A$ and $B$ is the set of elements that are in both $A$ and $B$. The intersection operation is denoted by $A \cap B$.
 $$
 A \cap B = \{x \mid x \in A \text{ and } x \in B\}
@@ -162,7 +162,7 @@ $$
 
 ---
 
-## Difference ( A \ B )
+### Difference ( A \ B )
 - The **difference** of two sets $A$ and $B$ is the set of elements that are in $A$ but not in $B$. The difference is denoted by $A \setminus B$ or $A - B$.
 $$
 A \setminus B = \{x \mid x \in A \text{ and } x \notin B\}
@@ -174,7 +174,7 @@ $$
 
 ---
 
-## Complement ( A' )
+### Complement ( A' )
 - The **complement** of a set $A$ refers to all the elements that are not in $A$, but are in the universal set $U$. The complement of $A$ is denoted by $A'$ or $A^c$.
 $$
 A' = \{x \mid x \in U \text{ and } x \notin A\}
@@ -186,7 +186,7 @@ $$
 
 ---
 
-## Symmetric Difference
+### Symmetric Difference
 - The **symmetric difference** of two sets $A$ and $B$ is the set of elements that are in either of the sets, but not in their intersection. It is denoted by $A \triangle B$.
 $$
 A \triangle B = (A \setminus B) \cup (B \setminus A)
@@ -198,7 +198,7 @@ $$
 
 ---
 
-## Cartesian Product
+### Cartesian Product
 - The **Cartesian product** of two sets $A$ and $B$ is the set of all ordered pairs $(a, b)$ where $a \in A$ and $b \in B$. It is denoted by $A \times B$.
 $$
 A \times B = \{(a, b) \mid a \in A \text{ and } b \in B\}
@@ -210,11 +210,11 @@ $$
 
 ---
 
-## Pairs and Tuples
+### Pairs and Tuples
 - **Pairs**: A **pair** is an ordered collection of two elements. For example, $(a, b)$ is a pair where the order matters—$(a, b) \neq (b, a)$ unless $a = b$.
 - **Tuples**: A **tuple** is an ordered collection of elements. A **2-tuple** is just a pair, a **3-tuple** is called a **triple**, and so on. For example, $(a, b, c)$ is a **3-tuple**.
 
-### Example of Pairs and Tuples:
+ Example of Pairs and Tuples:
 - **Pair**: $(2, 3)$ where the order matters.
 - **Triple**: $(1, 2, 3)$ where each element in the tuple is in a specific position.
 
@@ -261,7 +261,7 @@ $$
 (A \cap B)' = A' \cup B'
 $$
 
-### Example:
+ Example:
 If $A = \{1, 2, 3\}$ and $B = \{3, 4, 5\}$ with universal set $U = \{1, 2, 3, 4, 5, 6\}$, then:
 - $A' = \{4, 5, 6\}$
 - $B' = \{1, 2, 6\}$
@@ -298,7 +298,7 @@ $$
 (A')' = A
 $$
 
-### Example:
+ Example:
 If $A = \{1, 2, 3\}$ and the universal set $U = \{1, 2, 3, 4, 5\}$, then:
 - $A' = \{4, 5\}$
 - $(A')' = A = \{1, 2, 3\}$
@@ -438,5 +438,5 @@ $$
   - There is a line from $a$ to $b$ if $aRb$ and there is no element $c$ such that $aRc$ and $cRb$.
   - The diagram omits arrows, assuming that lines go upward (i.e., $aRb$ means $b$ is above $a$).
   
-### Example:
+ Example:
 For the set $A = \{1, 2, 3, 4\}$ with the partial order $R = \leq$, the Hasse diagram would look like this:

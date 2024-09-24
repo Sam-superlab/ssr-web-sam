@@ -3,7 +3,6 @@
 ---
 
 ## Fundamentals
-- [[Mainfolder/IBDP-Mathematics/Logics\|Logics]]
 - [[Mainfolder/IBDP-Mathematics/Mathematics Topics/Set theory\|Set theory]] 
 ## Analysis
 - [[Mainfolder/IBDP-Mathematics/Sequence and Series\|Sequence and Series]]

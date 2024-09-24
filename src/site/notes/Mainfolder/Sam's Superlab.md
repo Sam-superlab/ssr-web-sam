@@ -7,8 +7,8 @@
 
 ---
 
- [[Mainfolder/IBDP-Psychology/Psychology Revision/Psychology Topics\|Psychology Topics]] (70%)
- [[Mainfolder/IBDP-Mathematics/Mathematics Topic\|Mathematics Topic]] (5%)
+ [[Mainfolder/IBDP-Psychology/Psychology Revision/Psychology Topics\|Psychology Topics]] 
+ [[Mainfolder/IBDP-Mathematics/Mathematics Topic\|Mathematics Topic]]
  [[Mainfolder/CSC\|CSC]]
 
 ---

@@ -2,18 +2,84 @@
 {"dg-publish":true,"permalink":"/Mainfolder/IBDP-Mathematics/Sequence and Series/"}
 ---
 
+- [[Mainfolder/IBDP-Mathematics/Introduction to sequence\|Introduction to sequence]]
+- [[Mainfolder/IBDP-Mathematics/Types of sequence\|Types of sequence]]
+- [[Mainfolder/IBDP-Mathematics/Series and Summation Notation\|Series and Summation Notation]]
+- [[Mainfolder/IBDP-Mathematics/Geometric Series\|Geometric Series]]
+- [[Mainfolder/IBDP-Mathematics/Harmonic Series\|Harmonic Series]]
+- [[Mainfolder/IBDP-Mathematics/Convergence Tests for Series\|Convergence Tests for Series]]
+- [[Mainfolder/IBDP-Mathematics/Power Series\|Power Series]]
+- [[Mainfolder/IBDP-Mathematics/Taylor and Maclaurin Series\|Taylor and Maclaurin Series]]
+- [[Mainfolder/IBDP-Mathematics/Uniform Convergence of Series\|Uniform Convergence of Series]]
+- [[Fourier Series (Optional/Advanced Topic)\|Fourier Series (Optional/Advanced Topic)]]
+- [[Mainfolder/IBDP-Mathematics/Applications of Series\|Applications of Series]]
 
-## Power Series
 
-A power series is an infinite series of the form:
-$$
-\sum_{n=0}^{\infty} c_n (x - a)^n
-$$
-Where $a$ is the center of the series, and $c_n$ are the coefficients. The series converges within a certain interval known as the **radius of convergence**.
 
-### Example:
-The power series for $\frac{1}{1 - x}$ is:
-$$
-\sum_{n=0}^{\infty} x^n = 1 + x + x^2 + x^3 + \dots
-$$
-This series converges for $|x| < 1$.
+# Outline  
+### 1. **Introduction to Sequences**
+   - Definition of a sequence
+   - Notation and examples of sequences
+   - Convergence and divergence of sequences
+   - Limits of sequences
+   - Bounded and monotonic sequences
+
+### 2. **Types of Sequences**
+   - Arithmetic sequences
+   - Geometric sequences
+   - Harmonic sequences
+   - Recursive sequences
+   - Fibonacci sequence
+
+### 3. **Series and Summation Notation**
+   - Definition of a series
+   - Summation notation (Sigma notation)
+   - Partial sums
+   - Infinite series
+   - Convergence and divergence of series
+
+### 4. **Geometric Series**
+   - Formula for the sum of a geometric series
+   - Convergence of geometric series
+   - Applications of geometric series
+
+### 5. **Harmonic Series**
+   - Definition of the harmonic series
+   - Divergence of the harmonic series
+   - Comparison with p-series
+
+### 6. **Convergence Tests for Series**
+   - Divergence test (nth-term test)
+   - Integral test
+   - Comparison test
+   - Limit comparison test
+   - Ratio test
+   - Root test
+   - Alternating series test (Leibniz's test)
+
+### 7. **Power Series**
+   - Definition of power series
+   - Interval and radius of convergence
+   - Representation of functions as power series
+   - Taylor and Maclaurin series
+
+### 8. **Taylor and Maclaurin Series**
+   - Taylor series expansion of functions
+   - Maclaurin series as a special case of Taylor series
+   - Common Taylor series for elementary functions (e.g., $e^x$, $\sin(x)$, $\cos(x)$)
+   - Error bounds in Taylor series (Lagrange remainder)
+
+### 9. **Fourier Series** (Optional/Advanced Topic)
+   - Introduction to Fourier series
+   - Periodic functions and their decomposition into sines and cosines
+   - Applications in signal processing and physics
+
+### 10. **Uniform Convergence of Series**
+   - Pointwise vs. uniform convergence
+   - Weierstrass M-test
+   - Consequences of uniform convergence (term-by-term differentiation and integration)
+
+### 11. **Applications of Series**
+   - Applications in solving differential equations
+   - Series solutions to integrals
+   - Approximations of functions using Taylor polynomials

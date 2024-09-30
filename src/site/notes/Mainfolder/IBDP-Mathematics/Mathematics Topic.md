@@ -10,7 +10,16 @@
 - [[Mainfolder/IBDP-Mathematics/Functions\|Functions]]
 - [[Mainfolder/IBDP-Mathematics/Derivatives\|Derivatives]]
 - [[Mainfolder/IBDP-Mathematics/Integration of functions\|Integration of functions]] 
-- [[Mainfolder/IBDP-Mathematics/parametric equations and polar coordinates\|parametric equations and polar coordinates]]
-## Algebra
+## Basic Algebra
 [[Mainfolder/IBDP-Mathematics/Linear-Algebra\|Linear-Algebra]] 
+[[Mainfolder/IBDP-Mathematics/Abstract Algebra\|Abstract Algebra]] (Group theory, ring theory, field theory)
+[[Mainfolder/IBDP-Mathematics/Number theory\|Number theory]]
+[[Mainfolder/IBDP-Mathematics/Communicative Algebra\|Communicative Algebra]]
+
+
+## Advanced Algebra
+[[Mainfolder/IBDP-Mathematics/Modular forms\|Modular forms]]
+
+
 ## Topology and Geometry
+[[Mainfolder/IBDP-Mathematics/Point set topology\|Point set topology]]

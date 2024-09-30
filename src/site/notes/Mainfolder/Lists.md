@@ -2,6 +2,21 @@
 {"dg-publish":true,"permalink":"/Mainfolder/Lists/"}
 ---
 
+- [[Mainfolder/Lists#**List Basics Overview**:\|**List Basics Overview**:]]
+- [[Mainfolder/Lists#**Five Basic Concepts for a New Data Type**:\|**Five Basic Concepts for a New Data Type**:]]
+- [[Mainfolder/Lists#**Displaying Lists**:\|**Displaying Lists**:]]
+- [[Mainfolder/Lists#**Creating Lists**:\|**Creating Lists**:]]
+- [[Mainfolder/Lists#**Common List Operations**:\|**Common List Operations**:]]
+- [[Mainfolder/Lists#**List Transformations Overview**:\|**List Transformations Overview**:]]
+- [[#**Transformation through `map`**:|**Transformation through `map`**:]]
+- [[Mainfolder/Lists#**Transformation Flexibility**:\|**Transformation Flexibility**:]]
+- [[Mainfolder/Lists#**Transforming Other Types of Data**:\|**Transforming Other Types of Data**:]]
+- [[Mainfolder/Lists#**Errors and Type Matching**:\|**Errors and Type Matching**:]]
+- [[#**Using `apply`**:|**Using `apply`**:]]
+- [[Mainfolder/Lists#**Dealing with Complex Data**:\|**Dealing with Complex Data**:]]
+- [[#**Error Handling in `map` and `apply`**:|**Error Handling in `map` and `apply`**:]]
+- [[Mainfolder/Lists#**Summary**:\|**Summary**:]]
+
 ### **List Basics Overview**:
 In Scheme (and Scamper), a **list** is a fundamental data structure that holds collections of values. Lists are essential for handling multiple data points at once, making them especially useful in more complex problems, such as those found in data science.
 

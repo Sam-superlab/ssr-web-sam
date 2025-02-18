@@ -5,10 +5,12 @@
 # Author
 [Sam Ren](https://sam-superlab.github.io/) 
 
+[[Mainfolder/Sam Ren\|Sam Ren]]
+
 ---
 
- [[Mainfolder/IBDP-Psychology/Psychology Revision/Psychology Topics\|Psychology Topics]] 
- [[Mainfolder/IBDP-Mathematics/Mathematics Topic\|Mathematics Topic]]
+ [[Mainfolder/Psychology/Psychology Revision/Psychology Topics\|Psychology Topics]] 
+ [[Mainfolder/Mathematics/Mathematics Topic\|Mathematics Topic]]
  [[Mainfolder/CSC\|CSC]]
 
 ---

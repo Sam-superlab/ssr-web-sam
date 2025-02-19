@@ -10,7 +10,7 @@ Here are some key concepts:
 3. [[Mainfolder/Statistics/Shape\|Shape]]
 4. [[Mainfolder/Statistics/Outliers\|Outliers]]
 
-Basically, when we wish to discuss about **center** and *spread*, there are two separate approach:
+Basically, when we wish to discuss about **center** and **spread**, there are two separate approach:
 
 - [[Mainfolder/Statistics/Order Statistics\|Order Statistics]]
 - [[Mainfolder/Statistics/moment statistics\|moment statistics]]

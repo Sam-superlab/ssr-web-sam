@@ -13,6 +13,7 @@
  [[Mainfolder/Mathematics/Mathematics Topic\|Mathematics Topic]]
  [[Mainfolder/CSC\|CSC]]
  [[Mainfolder/Statistics/Statistics\|Statistics]]
+ [[Mainfolder/Mathematics/Linear Algebra\|Linear Algebra]] 
 
 ---
 

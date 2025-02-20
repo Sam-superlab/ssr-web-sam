@@ -19,7 +19,7 @@ Key concepts:
 	- nearly all surveys are observational studies
 
 
-## Sample
+## [[Mainfolder/Statistics/sample\|Sample]]
 We want our sample to be **representative** of our population
 - this means that our sample is nearly the same as our population, only smaller
 - a representative sample allows us to **generalize our results** from the sample to the pop.

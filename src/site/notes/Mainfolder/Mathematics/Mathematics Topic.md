@@ -15,7 +15,7 @@
 - [[Mainfolder/Mathematics/Real Analysis\|Real Analysis]]
 - [[Mainfolder/Mathematics/Complex Analysis\|Complex Analysis]]
 ## Basic Algebra
-[[Mainfolder/Mathematics/Linear-Algebra\|Linear-Algebra]] 
+[[Mainfolder/Mathematics/Linear Algebra\|Linear Algebra]] 
 [[Mainfolder/Mathematics/Abstract Algebra\|Abstract Algebra]] (Group theory, ring theory, field theory)
 [[Mainfolder/Mathematics/Number theory\|Number theory]]
 [[Mainfolder/Mathematics/Communicative Algebra\|Communicative Algebra]]

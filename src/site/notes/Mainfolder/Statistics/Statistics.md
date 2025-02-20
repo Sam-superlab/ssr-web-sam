@@ -8,4 +8,6 @@
 3. [[Mainfolder/Statistics/Numerical Summaries\|Numerical Summaries]]
 4. [[Mainfolder/Statistics/Tables\|Tables]]
 5. [[Mainfolder/Statistics/Study design\|Study design]]
+6. [[Mainfolder/Statistics/Correlation\|Correlation]]
+
 

@@ -6,7 +6,7 @@ Key concepts:
 - [[Mainfolder/Statistics/Randomization\|Randomization]]
 - [[Mainfolder/Statistics/treatment\|treatment]]
 - [[Mainfolder/Statistics/explanatory variable\|explanatory variable]]
-- 
+- [[Mainfolder/Statistics/sample\|sample]]
 ## Types of Studies
 - **Experiments** are studies that involve **manipulating a [[Mainfolder/Statistics/treatment\|treatment]]** that each participant receives
 	- typically treatments are *randomly assigned*(see [[Mainfolder/Statistics/Randomization\|Randomization]]) to participants
@@ -26,4 +26,4 @@ We want our sample to be **representative** of our population
 - **biased**: a sample that is **not** representative
 
 ### Random Sample
-We can choose people at random from our population to reduce the chances of getting a biased sample. Usually it is best way to get 
+We can choose people at random from our population to reduce the chances of getting a biased sample. Usually it is best way to get the representative sample 

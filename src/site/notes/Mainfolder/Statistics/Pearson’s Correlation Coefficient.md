@@ -4,7 +4,9 @@
 
 ## What is Pearson’s Correlation Coefficient
 Building upon the work from French scientist Francis Galton, Pearson developed the **Pearson’s correlation coefficient (r)**:
-$$r= \frac{1}{n-1} \sum(z_{x_{i}})(z{y_{i}})$$ Pearson’s correlation coefficient tells us the strength of linear association between two quantitative variables (and direction!)
+$$r= \frac{1}{n-1} \sum(z_{x_{i}})(z{y_{i}})$$
+
+Pearson’s correlation coefficient tells us the strength of linear association between two quantitative variables (and direction!)
 
 **Notice that it can only indicates linear relationship, its possible that exists other relationship with r very small**
 

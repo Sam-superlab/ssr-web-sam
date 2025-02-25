@@ -2,19 +2,19 @@
 {"dg-publish":true,"permalink":"/Mainfolder/Statistics/Study design/"}
 ---
 
-Key concepts:
+**Key concepts**:
 - [[Mainfolder/Statistics/Randomization\|Randomization]]
 - [[Mainfolder/Statistics/treatment\|treatment]]
 - [[Mainfolder/Statistics/explanatory variable\|explanatory variable]]
 - [[Mainfolder/Statistics/sample\|sample]]
 ## Types of Studies
-- **Experiments** are studies that involve **manipulating a [[Mainfolder/Statistics/treatment\|treatment]]** that each participant receives
+- **[[Mainfolder/Statistics/Experiments\|Experiments]]** are studies that involve **manipulating a [[Mainfolder/Statistics/treatment\|treatment]]** that each participant receives
 	- typically treatments are *randomly assigned*(see [[Mainfolder/Statistics/Randomization\|Randomization]]) to participants
 	- we then measure participants’ response to the treatment
 	- the treatment is the [[Mainfolder/Statistics/explanatory variable\|explanatory variable]]
 	- establish a ***[[Mainfolder/Statistics/cause-and-effect relationship\|cause-and-effect relationship]]*** 
 	- We need to control everything(**[[Mainfolder/Statistics/confounding\|confounding]]**) that could change the response except for the treatments (*[[Mainfolder/Statistics/Randomization\|randomization]] of treatments is the best way to accomplish this*)
-- **Observational** **Studies** are studies that **do not** involve manipulating the explanatory variables for participants.
+- **[[Mainfolder/Statistics/Observational Studies\|Observational Studies]]** are studies that **do not** involve manipulating the explanatory variables for participants.
 	- we are simply ”observing” what is going on without intervening
 	- nearly all surveys are observational studies
 

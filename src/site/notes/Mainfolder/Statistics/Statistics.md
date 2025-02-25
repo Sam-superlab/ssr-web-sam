@@ -9,5 +9,7 @@
 4. [[Mainfolder/Statistics/Tables\|Tables]]
 5. [[Mainfolder/Statistics/Study design\|Study design]]
 6. [[Mainfolder/Statistics/Correlation\|Correlation]]
+7. [[Mainfolder/Statistics/Regression\|Regression]]
+
 
 

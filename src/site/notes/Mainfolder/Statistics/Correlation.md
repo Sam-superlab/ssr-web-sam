@@ -3,7 +3,7 @@
 ---
 
 ## What is correlation?
-Correlation is an Association between 2 Quantitative Variables.
+Correlation is an [[Mainfolder/Statistics/Association\|Association]] between 2 Quantitative Variables.
 
 ## Linear correlation
 If we have a **linear** plot, how can we quantify the strength for correlation?

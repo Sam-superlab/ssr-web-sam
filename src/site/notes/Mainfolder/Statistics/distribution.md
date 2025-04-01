@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/Mainfolder/Statistics/distribution/"}
 ---
 
-Distribution is ...
+Distribution is frequency of each value appears in a data
 
 When talking about distribution. We need to mention all of the following things: 
 - **[[Mainfolder/Statistics/Shape\|Shape]]** - is the distribution symmetric, skewed, bell-shaped, bimodal? 

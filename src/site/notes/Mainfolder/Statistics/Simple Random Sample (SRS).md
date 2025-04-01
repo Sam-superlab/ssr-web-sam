@@ -22,12 +22,13 @@
 
 ### Key Differences  Vs. Stratified Sampling
 
-| Feature                | SRS                                  | Stratified Sampling                  |  
-|------------------------|--------------------------------------|--------------------------------------|  
-| Subgroups          | Ignores subgroups                   | Explicitly defines strata            |  
-| Precision          | Lower for heterogeneous populations | Higher due to reduced variability    |  
-| Implementation     | Simpler                             | More complex                         |  
-| Use Case           | Homogeneous populations             | Populations with distinct subgroups  |  
+| Feature        | SRS                                 | Stratified Sampling                 |     |
+| -------------- | ----------------------------------- | ----------------------------------- | --- |
+| Subgroups      | Ignores subgroups                   | Explicitly defines strata           |     |
+| Precision      | Lower for heterogeneous populations | Higher due to reduced variability   |     |
+| Implementation | Simpler                             | More complex                        |     |
+| Use Case       | Homogeneous populations             | Populations with distinct subgroups |     |
+|                |                                     |                                     |     |
 ### When to Use  
 - SRS: Best for small, homogeneous populations or when no prior subgroup information exists.  
 - Stratified: Ideal for populations with distinct subgroups needing precise representation (e.g., clinical trials, demographic surveys).  

@@ -11,9 +11,9 @@
 - **[[Mainfolder/Statistics/Experiments\|Experiments]]** are studies that involve **manipulating a [[Mainfolder/Statistics/treatment\|treatment]]** that each participant receives
 	- typically treatments are *randomly assigned*(see [[Mainfolder/Statistics/Randomization\|Randomization]]) to participants
 	- we then measure participants’ response to the treatment
-	- the treatment is the [[Mainfolder/Statistics/explanatory variable\|explanatory variable]]
+	- The treatment is the [[Mainfolder/Statistics/explanatory variable\|explanatory variable]]
 	- establish a ***[[Mainfolder/Statistics/cause-and-effect relationship\|cause-and-effect relationship]]*** 
-	- We need to control everything(**[[Mainfolder/Statistics/confounding\|confounding]]**) that could change the response except for the treatments (*[[Mainfolder/Statistics/Randomization\|randomization]] of treatments is the best way to accomplish this*)
+	- We need to control everything(**[[Mainfolder/Statistics/confounding\|confounding]]**) that could change the response, except for the treatments (*[[Mainfolder/Statistics/Randomization\|randomization]] of treatments is the best way to accomplish this*)
 - **[[Mainfolder/Statistics/Observational Studies\|Observational Studies]]** are studies that **do not** involve manipulating the explanatory variables for participants.
 	- we are simply ”observing” what is going on without intervening
 	- nearly all surveys are observational studies
@@ -26,4 +26,4 @@ We want our sample to be **representative** of our population
 - **biased**: a sample that is **not** representative
 
 ### Random Sample
-We can choose people at random from our population to reduce the chances of getting a biased sample. Usually it is best way to get the representative sample 
+We can choose people at random from our population to reduce the chances of getting a biased sample. Usually it is the best way to get a representative sample 

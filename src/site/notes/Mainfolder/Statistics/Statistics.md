@@ -10,6 +10,8 @@
 5. [[Mainfolder/Statistics/Study design\|Study design]]
 6. [[Mainfolder/Statistics/Correlation\|Correlation]]
 7. [[Mainfolder/Statistics/Regression\|Regression]]
+8. [[Mainfolder/Statistics/Probability\|Probability]]
+9. 
 
 
 

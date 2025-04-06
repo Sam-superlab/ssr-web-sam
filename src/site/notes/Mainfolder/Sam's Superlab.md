@@ -5,17 +5,13 @@
 # Author
 [Sam Ren](https://sam-superlab.github.io/) 
 
-[[Mainfolder/Sam Ren\|Sam Ren]]
 
----
 
- [[Mainfolder/Psychology/Psychology Revision/Psychology Topics\|Psychology Topics]] 
- [[Mainfolder/Mathematics/Mathematics Topic\|Mathematics Topic]]
- [[Mainfolder/CSC\|CSC]]
- [[Mainfolder/Statistics/Statistics\|Statistics]]
- [[Mainfolder/Mathematics/Linear Algebra\|Linear Algebra]] 
-
----
+-  [[Mainfolder/Psychology/Psychology Revision/Psychology Topics\|Psychology Topics]] (For IBDP)
+ - [[Mainfolder/Mathematics/Mathematics Topic\|Mathematics Topic]]
+ - [[Mainfolder/CSC\|CSC]] (Grinnell CSC-151)
+ - [[Mainfolder/Statistics/Statistics\|Statistics]] (Grinnell STA-209)
+ - [[Mainfolder/Mathematics/Linear Algebra\|Linear Algebra]] (Grinnell MAT-215)
 
 
 “Wir müssen wissen. Wir werden wissen." (_We must know_. _We will know_.)---David Hilbert

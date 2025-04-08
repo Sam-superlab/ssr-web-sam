@@ -11,7 +11,11 @@
 6. [[Mainfolder/Statistics/Correlation\|Correlation]]
 7. [[Mainfolder/Statistics/Regression\|Regression]]
 8. [[Mainfolder/Statistics/Probability\|Probability]]
-9. 
+9. [[Mainfolder/Statistics/Normal Distribution\|Normal Distribution]]
+10. [[Mainfolder/Statistics/t-distribution\|t-distribution]]
+11. [[Mainfolder/Statistics/sampling distribution\|sampling distribution]] 
+12. [[Mainfolder/Statistics/Confidence Interval\|Confidence Interval]]
+13. 
 
 
 

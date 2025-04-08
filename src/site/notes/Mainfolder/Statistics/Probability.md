@@ -8,5 +8,6 @@
 - [[Mainfolder/Statistics/Odds\|Odds]]
 - [[Mainfolder/Statistics/Relative Risk\|Relative Risk]]
 - [[Mainfolder/Statistics/Probability Distributions\|Probability Distributions]]
+- [[Mainfolder/Statistics/Expectation value and Variance\|Expectation value and Variance]]
 
 

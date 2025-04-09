@@ -2,6 +2,9 @@
 {"dg-publish":true,"permalink":"/Mainfolder/Statistics/Normal Distribution/"}
 ---
 
+- [[Mainfolder/Statistics/Critical Values\|Critical Values]]
+- [[Mainfolder/Statistics/degrees of freedom\|degrees of freedom]]
+
 ## What is normal distribution
 
 Due to [[Mainfolder/Statistics/Central Limit Theorem\|Central Limit Theorem]] we have seen normal distribution really often. 

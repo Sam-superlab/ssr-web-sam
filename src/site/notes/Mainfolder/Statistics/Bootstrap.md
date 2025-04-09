@@ -4,98 +4,88 @@
 
 ## Introduction to Bootstrapping
 
-Bootstrapping is a distribution-free approach that serves as an alternative to normal and t-distribution methods for statistical inference. According to your materials, bootstrapping addresses a core challenge:
+Bootstrapping is a distribution-free approach that serves as an alternative to normal and t-distribution methods for statistical inference. Bootstrapping addresses a core challenge:
 
 > "How to construct confidence intervals for non-mean/proportion statistics where CLT doesn't apply?"
 
-Source: "Bootstrapping: Alternative to Normal and t-Distributions"
-
 ## Fundamental Concept
 
-Bootstrapping uses the original sample as a population proxy to create multiple resamples. The key process involves:
+Bootstrapping uses the original sample as a population proxy to create multiple resamples. The process follows:
 
-1. Taking the original sample
-2. Creating bootstrap samples through sampling with replacement
-3. Maintaining the original sample size in each resample
-4. Building a bootstrap distribution from the resampled statistics
-
-Source: "Practical Implementation of Bootstrapping" and "Bootstrapping: Alternative to Normal and t-Distributions"
+| Step | Description |
+|------|-------------|
+| 1. Original Sample | Use sample as proxy population |
+| 2. Resampling | Create bootstrap samples with replacement |
+| 3. Sample Size | Maintain original $n$ in each resample |
+| 4. Distribution | Build bootstrap distribution from resampled statistics |
 
 ## Advantages of Bootstrapping
 
-Your knowledge base highlights several key advantages:
-
-1. Distribution-free approach (no normality assumption required)
-2. Adaptable to various statistics beyond means and proportions:
-   - Medians
-   - Standard deviations
-   - IQR
-3. Requires minimal theoretical assumptions
-
-Source: "Practical Implementation of Bootstrapping"
+| Advantage | Description |
+|-----------|-------------|
+| Distribution-free | No normality assumption required |
+| Versatility | Works with various statistics beyond means and proportions |
+| Flexibility | Handles medians, standard deviations, IQR |
+| Minimal Assumptions | Requires fewer theoretical assumptions |
 
 ## Implementation Process
 
-The practical steps include:
-
-1. Create multiple bootstrap samples (typically ≥1,000 resamples)
-2. Calculate the statistic of interest for each resample
+1. Create multiple bootstrap samples (typically $n \geq 1,000$ resamples)
+2. Calculate the statistic of interest ($\theta^*$) for each resample
 3. Aggregate results into a distribution plot
 4. Observe the emergent distribution shape (often normal-like)
-5. Identify the central peak around the original sample mean
-
-Source: "Practical Implementation of Bootstrapping"
+5. Identify the central peak around the original sample statistic ($\hat{\theta}$)
 
 ## Confidence Interval Derivation
 
-The percentile method is commonly used:
+### Percentile Method
 
-- For a 95% CI:
-  - Lower bound: 2.5th percentile of bootstrap distribution
-  - Upper bound: 97.5th percentile of bootstrap distribution
+| Confidence Level | Lower Bound | Upper Bound |
+|-----------------|-------------|-------------|
+| 95% CI | $2.5^{th}$ percentile | $97.5^{th}$ percentile |
+| 90% CI | $5^{th}$ percentile | $95^{th}$ percentile |
+| 99% CI | $0.5^{th}$ percentile | $99.5^{th}$ percentile |
 
-Generalization Formula:
-- (α/2 × 100)th to (1 − α/2 × 100)th percentiles
-
-Example confidence levels:
-- 90% CI: 5th to 95th percentiles
-- 99% CI: 0.5th to 99.5th percentiles
-
-Source: "Advanced Bootstrap Techniques"
+### General Formula
+For confidence level $(1-\alpha)$:
+- Lower bound: $(\frac{\alpha}{2} \times 100)^{th}$ percentile
+- Upper bound: $(1 - \frac{\alpha}{2} \times 100)^{th}$ percentile
 
 ## Critical Implementation Requirements
 
-Your knowledge base emphasizes several requirements:
+### 1. Data Requirements
+| Requirement | Specification |
+|-------------|--------------|
+| Sampling | Random selection required |
+| Sample Size | $n \geq 30$ recommended |
 
-1. Data Requirements:
-   - Original sample must be randomly selected
-   - Sufficiently large (n ≥ 30 recommended)
+### 2. Resampling Protocol
+- Strict replacement policy
+- Maintain identical sample size
+- Preserve original data values
 
-2. Resampling Protocol:
-   - Strict replacement policy
-   - Identical sample size maintenance
-
-3. Error Prevention - Avoid:
-   - Sampling without replacement
-   - Altering sample sizes
-   - Modifying original data values
-
-Source: "Advanced Bootstrap Techniques"
+### 3. Common Errors to Avoid
+| Error | Why It's Problematic |
+|-------|---------------------|
+| No Replacement | Violates bootstrap principle |
+| Changed Sample Size | Affects distribution properties |
+| Modified Data | Introduces bias |
 
 ## Comparison to Traditional Methods
 
-| Method          | Theoretical Basis | Data Requirements | Computational Load |
-|-----------------|-------------------|-------------------|--------------------|
-| Traditional CI  | CLT/Normal Theory | Large n           | Low                |
-| Bootstrap CI    | Empirical Resampling | Moderate n      | High               |
-
-Source: "Advanced Bootstrap Techniques"
+| Aspect | Traditional CI | Bootstrap CI |
+|--------|---------------|--------------|
+| Theoretical Basis | CLT/Normal Theory | Empirical Resampling |
+| Data Requirements | Large $n$ | Moderate $n$ |
+| Computational Load | Low | High |
+| Flexibility | Limited | High |
+| Assumptions | More strict | More flexible |
 
 ## R Implementation Example
 
 ```R
 bootstrap <- function(x, statistic, n = 1000L) {
- bs <- replicate(n, {
+  bs <- replicate(n, {
     sb <- sample(x, replace = TRUE)
     statistic(sb)
   })
@@ -103,18 +93,25 @@ bootstrap <- function(x, statistic, n = 1000L) {
 }
 ```
 
-This function demonstrates the core bootstrapping process:
-1. Take `n` resamples with replacement
-2. Apply the desired statistic to each resample
-3. Return the results as a data frame
-
-Source: "Bootstrapping Lab"
+### Function Components
+| Component | Purpose |
+|-----------|----------|
+| `x` | Input data vector |
+| `statistic` | Function to compute desired statistic |
+| `n` | Number of bootstrap resamples |
+| `replace = TRUE` | Ensures proper bootstrap sampling |
 
 ## Validation Process
 
-To ensure valid bootstrap results:
-
+### Distribution Checking
 1. Verify bootstrap distribution shape
 2. Check symmetry properties:
-   - If symmetric → standard error methods may be applicable
-   - If asymmetric → percentile method preferred
+   - Symmetric: Standard error methods may be applicable
+   - Asymmetric: Prefer percentile method
+
+### Quality Metrics
+| Metric | Target |
+|--------|--------|
+| Number of Resamples | $\geq 1,000$ |
+| Coverage Probability | Close to nominal level |
+| Distribution Shape | Smooth, well-defined |

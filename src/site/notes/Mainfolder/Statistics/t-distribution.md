@@ -2,46 +2,70 @@
 {"dg-publish":true,"permalink":"/Mainfolder/Statistics/t-distribution/"}
 ---
 
+## t-Distribution
+
 When working with small samples or when the **population standard deviation is unknown, we use the t-distribution.**
+
 ### Key Properties
 - Symmetric around zero
-- Bell-shaped like the Normal distribution
-- Characterized by [[Mainfolder/Statistics/degrees of freedom\|degrees of freedom]] (df = n - 1)
+- Bell-shaped like the [[Mainfolder/Statistics/Normal Distribution\|Normal Distribution]]
+- Characterized by [[Mainfolder/Statistics/degrees of freedom\|degrees of freedom]] (df = $n - 1$)
 - Has heavier tails than the Normal distribution
-- Approaches the Normal distribution as sample size increases (n → $\infty$)
+- Approaches the Normal distribution as sample size increases ($n \to \infty$)
 
 ### Comparing Normal and t-Distributions
 
-From your knowledge base:
-- t-distribution requires wider intervals due to heavier tails
-- As sample size increases, t-distribution converges to Normal
+| Aspect              | t-Distribution         | Normal Distribution       |
+| ------------------- | ---------------------- | ------------------------- |
+| Tail Weight         | Heavier tails          | Standard tails            |
+| Sample Size         | Best for small samples | Best for large samples    |
+| Parameters          | Degrees of freedom     | Mean and variance         |
+| [[Mainfolder/Statistics/Critical Values\|Critical Values]] | Varies with df         | Fixed values (e.g., 1.96) |
+|                     |                        |                           |
 
-## Confidence Intervals Using These Distributions
+## Confidence Intervals
 
-### Normal Distribution (Large Samples)
+### Using Normal Distribution ($n \geq 30$)
+For 95% confidence intervals when $\sigma$ is known or $n \geq 30$:
 
-For 95% confidence intervals when σ is known or n ≥ 30:
-- x̄ ± 1.96 × (σ/√n)
+$$\bar{x} \pm 1.96 \times \frac{\sigma}{\sqrt{n}}$$
 
-### t-Distribution (Small Samples)
+### Using t-Distribution (Small Samples)
+For small samples or unknown $\sigma$:
 
-For small samples or unknown σ:
-- x̄ ± t₀.₉₇₅,ₙ₋₁ × (s/√n)
-- Where t₀.₉₇₅,ₙ₋₁ is the 97.5th percentile of the t-distribution with n-1 degrees of freedom
+$$\bar{x} \pm t_{\alpha/2, n-1} \times \frac{s}{\sqrt{n}}$$
 
-### Trade-offs in Confidence Intervals
+where $t_{\alpha/2, n-1}$ is the critical value from t-distribution with $n-1$ degrees of freedom
 
-From your knowledge base:
-- Higher confidence level → Wider interval
-- Lower confidence level → Narrower interval
-- Larger sample size → Narrower interval
+### Effect of Parameters on Intervals
+
+The width of confidence intervals depends on:
+- **Confidence Level**: Higher → Wider interval
+- **Sample Size**: Larger → Narrower interval
+- **Variability**: More variable → Wider interval
 
 ## Conditions for Valid Application
 
-For the Normal approximation to be valid:
+### For Normal Distribution
 1. Random sample from the population
-2. Sample size n ≥ 30 (otherwise, use t-distribution)
+2. Sample size $n \geq 30$
 
-For t-distribution to be valid:
-1. Random sample
-2. The population should be approximately normally distributed if n is small
+### For t-Distribution
+1. Random sample from the population
+2. For small $n$: Population should be approximately normal
+3. Independent observations
+
+### When to Use Each
+- Use t-distribution when:
+  * Sample size is small ($n < 30$)
+  * Population standard deviation ($\sigma$) is unknown
+  * Working with differences in means
+- Use Normal distribution when:
+  * Sample size is large ($n \geq 30$)
+  * Population standard deviation is known
+  * Working with proportions
+
+See also:
+- [[Mainfolder/Statistics/Confidence Interval\|Confidence Interval]]
+- [[Mainfolder/Statistics/Standard error\|Standard Error]]
+- [[Mainfolder/Statistics/degrees of freedom\|degrees of freedom]]

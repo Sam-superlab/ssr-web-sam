@@ -2,9 +2,9 @@
 {"dg-publish":true,"permalink":"/Mainfolder/Statistics/Confidence Interval/"}
 ---
 
-- [[Confidence Interval for population mean\|Confidence Interval for population mean]]
-- [[Confidence Interval for proportions\|Confidence Interval for proportions]]
-- [[Confidence Interval for difference between groups\|Confidence Interval for difference between groups]]
+- [[Mainfolder/Statistics/Confidence Interval for population mean\|Confidence Interval for population mean]]
+- [[Mainfolder/Statistics/Confidence Interval for proportions\|Confidence Interval for proportions]]
+- [[Mainfolder/Statistics/Confidence Interval for difference between groups\|Confidence Interval for difference between groups]]
 
 # Constructing Confidence Intervals - Reference Guide
 

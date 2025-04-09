@@ -15,7 +15,8 @@
 10. [[Mainfolder/Statistics/t-distribution\|t-distribution]]
 11. [[Mainfolder/Statistics/sampling distribution\|sampling distribution]] 
 12. [[Mainfolder/Statistics/Confidence Interval\|Confidence Interval]]
-13. 
+13. [[Mainfolder/Statistics/Bootstrap\|Bootstrap]]
+14. 
 
 
 

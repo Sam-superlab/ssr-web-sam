@@ -4,6 +4,7 @@
 
 - [[Mainfolder/Statistics/Critical Values\|Critical Values]]
 - [[Mainfolder/Statistics/degrees of freedom\|degrees of freedom]]
+- [[Mainfolder/Statistics/Central Limit Theorem\|Central Limit Theorem]]
 
 ## What is normal distribution
 

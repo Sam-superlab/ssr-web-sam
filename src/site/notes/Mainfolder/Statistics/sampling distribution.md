@@ -35,7 +35,7 @@ Imagine measuring student heights:
 |---------|-------------|
 | Purpose | Shows variability of statistics across samples due to random chance |
 | Practice | Usually work with one sample, but concept helps understand variability |
-| Application | Used in [[inference\|inference]] and [[Mainfolder/Statistics/hypothesis testing\|hypothesis testing]] |
+| Application | Used in [[inference\|inference]] and [[hypothesis testing\|hypothesis testing]] |
 
 ## Types of Distributions
 
@@ -110,5 +110,5 @@ $$SE_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}}$$
 
 These concepts are fundamental for:
 - [[Mainfolder/Statistics/Confidence Interval\|Confidence Interval]]
-- [[Mainfolder/Statistics/hypothesis testing\|Hypothesis Testing]]
+- [[hypothesis testing\|Hypothesis Testing]]
 - [[Statistical Inference\|Statistical Inference]]

@@ -12,12 +12,12 @@ Bootstrapping is a distribution-free approach that serves as an alternative to n
 
 Bootstrapping uses the original sample as a population proxy to create multiple resamples. The process follows:
 
-| Step | Description |
-|------|-------------|
-| 1. Original Sample | Use sample as proxy population |
-| 2. Resampling | Create bootstrap samples with replacement |
-| 3. Sample Size | Maintain original $n$ in each resample |
-| 4. Distribution | Build bootstrap distribution from resampled statistics |
+| Step               | Description                                            |
+| ------------------ | ------------------------------------------------------ |
+| 1. Original Sample | Use sample as proxy population                         |
+| 2. Resampling      | Create bootstrap samples with replacement              |
+| 3. Sample Size     | Maintain original $n$ in each resample                 |
+| 4. Distribution    | Build bootstrap distribution from resampled statistics |
 
 ## Advantages of Bootstrapping
 
@@ -54,10 +54,10 @@ For confidence level $(1-\alpha)$:
 ## Critical Implementation Requirements
 
 ### 1. Data Requirements
-| Requirement | Specification |
-|-------------|--------------|
-| Sampling | Random selection required |
-| Sample Size | $n \geq 30$ recommended |
+| Requirement | Specification             |     |
+| ----------- | ------------------------- | --- |
+| Sampling    | Random selection required |     |
+| Sample Size | $n \geq 30$ recommended   |     |
 
 ### 2. Resampling Protocol
 - Strict replacement policy
@@ -110,8 +110,8 @@ bootstrap <- function(x, statistic, n = 1000L) {
    - Asymmetric: Prefer percentile method
 
 ### Quality Metrics
-| Metric | Target |
-|--------|--------|
-| Number of Resamples | $\geq 1,000$ |
+| Metric               | Target                 |
+| -------------------- | ---------------------- |
+| Number of Resamples  | $\geq 1,000$           |
 | Coverage Probability | Close to nominal level |
-| Distribution Shape | Smooth, well-defined |
+| Distribution Shape   | Smooth, well-defined   |

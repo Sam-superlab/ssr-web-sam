@@ -4,7 +4,7 @@
 
 # Critical Values
 
-Critical values are the cut-off points that separate the critical region from the non-critical region in a [[Mainfolder/Statistics/hypothesis testing\|hypothesis test]] or determine the width of a [[Mainfolder/Statistics/Confidence Interval\|confidence interval]].
+Critical values are the cut-off points that separate the critical region from the non-critical region in a [[hypothesis testing\|hypothesis test]] or determine the width of a [[Mainfolder/Statistics/Confidence Interval\|confidence interval]].
 
 ## Choosing Critical Values
 
@@ -78,7 +78,7 @@ t-critical values depend on:
 
 See also:
 - [[Mainfolder/Statistics/Confidence Interval\|Confidence Interval]]
-- [[Mainfolder/Statistics/hypothesis testing\|hypothesis testing]]
+- [[hypothesis testing\|hypothesis testing]]
 - [[Mainfolder/Statistics/Standard error\|Standard Error]]
 - [[Mainfolder/Statistics/t-distribution\|t-distribution]]
 - [[Mainfolder/Statistics/Normal Distribution\|Normal Distribution]] 

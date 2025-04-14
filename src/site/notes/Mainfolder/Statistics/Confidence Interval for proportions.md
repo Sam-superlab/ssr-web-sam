@@ -5,10 +5,10 @@
 ## For a Single Population Proportion:
 
 ### 1. Parameter of Interest
-| Type | Symbol | Description |
-|------|---------|------------|
-| Population Proportion | $p$ | The true proportion you're estimating |
-| Sample Proportion | $\hat{p}$ | Number of successes / sample size |
+| Type                  | Symbol    | Description                           |
+| --------------------- | --------- | ------------------------------------- |
+| Population Proportion | $p$       | The true proportion you're estimating |
+| Sample Proportion     | $\hat{p}$ | Number of successes / sample size     |
 
 ### 2. Check Conditions
 | Condition | Requirement | How to Check |

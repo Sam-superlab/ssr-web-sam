@@ -1,6 +1,7 @@
 ---
-dg-publish: true
+{"dg-publish":true,"permalink":"/Mainfolder/Statistics/Hypothesis Testing Key Concepts/"}
 ---
+
 
 ## Key Concepts in Hypothesis Testing
 

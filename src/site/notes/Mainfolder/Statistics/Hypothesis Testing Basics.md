@@ -1,6 +1,7 @@
 ---
-dg-publish: true
+{"dg-publish":true,"permalink":"/Mainfolder/Statistics/Hypothesis Testing Basics/"}
 ---
+
 
 ## Introduction to Hypothesis Testing
 

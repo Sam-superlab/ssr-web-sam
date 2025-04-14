@@ -1,6 +1,7 @@
 ---
-dg-publish: true
+{"dg-publish":true,"permalink":"/Mainfolder/Statistics/Hypothesis Testing for Proportions/"}
 ---
+
 
 ## Hypothesis Testing for Proportions
 

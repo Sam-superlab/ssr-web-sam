@@ -5,30 +5,45 @@
 
 ## Introduction to Hypothesis Testing
 
-*   **Purpose**: Hypothesis testing is a formal statistical technique used to answer binary questions (yes/no) about a [[Mainfolder/Statistics/Population\|Population]] using data collected from a [[Mainfolder/Statistics/sample\|sample]]. This contrasts with [[Mainfolder/Statistics/Confidence Interval\|Confidence Interval]], whose primary purpose is estimating a [[Mainfolder/Statistics/Parameter\|Parameter]] or providing a range of plausible values.
-*   **Examples of Questions**:
-    *   Is a coin fair? (yes/no)
-    *   Is a new drug more effective than an existing one? (yes/no)
-*   **Analogy (Court Case)**: Think of a court trial. We assume innocence (null hypothesis) until sufficient evidence suggests guilt (alternative hypothesis). Finding someone "not guilty" doesn't *prove* innocence, just that there wasn't enough evidence for guilt. Similarly, failing to reject the null hypothesis doesn't prove it's true.
+| Aspect | Description |
+|--------|-------------|
+| **Purpose** | Formal statistical technique to answer binary questions (yes/no) about a [[Mainfolder/Statistics/Population\|Population]] using [[Mainfolder/Statistics/sample\|sample]] data |
+| **Contrast with** | [[Mainfolder/Statistics/Confidence Interval\|Confidence Interval]] - which estimates parameters or provides ranges of plausible values |
+| **Key Feature** | Compares two competing possibilities about a population parameter |
+
+### Examples of Hypothesis Testing Questions
+
+| Type | Example |
+|------|---------|
+| Fairness Test | Is a coin fair? (yes/no) |
+| Treatment Effect | Is a new drug more effective than an existing one? (yes/no) |
+| Quality Control | Does a manufacturing process meet specifications? (yes/no) |
+
+### Court Case Analogy
+
+| Concept | Court Case | Hypothesis Testing |
+|---------|------------|-------------------|
+| Initial Assumption | Innocence | Null Hypothesis ($H_0$) |
+| Alternative | Guilt | Alternative Hypothesis ($H_a$) |
+| Evidence Required | Beyond reasonable doubt | Small p-value |
+| Decision | Not guilty ≠ innocent | Fail to reject $H_0$ ≠ $H_0$ is true |
 
 ### Core Components: The Hypotheses
 
-Every hypothesis test involves two competing statements about a population parameter (e.g., population proportion $p$, population mean $\mu$).
-
-| Component                      | Description                                                                                                         | Format                                                                                                                                                                      |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Null Hypothesis ($H_0$)        | Represents a skeptical viewpoint, the status quo, or an assumption of no effect, no difference, or no relationship. | $H_0: \text{parameter} = \text{hypothesized value}$                                                                                                                         |
-| Alternative Hypothesis ($H_a$) | Represents what the researcher aims to find evidence *for*. It contradicts the null hypothesis.                     | $H_a: \text{parameter} > \text{value}$ (Right-tailed) <br> $H_a: \text{parameter} < \text{value}$ (Left-tailed) <br> $H_a: \text{parameter} \neq \text{value}$ (Two-tailed) |
+| Component | Description | Format |
+|-----------|-------------|--------|
+| Null Hypothesis ($H_0$) | Represents skepticism, status quo, or no effect | $H_0: \text{parameter} = \text{hypothesized value}$ |
+| Alternative Hypothesis ($H_a$) | Represents what we aim to find evidence for | $H_a: \text{parameter} > \text{value}$ (Right-tailed) <br> $H_a: \text{parameter} < \text{value}$ (Left-tailed) <br> $H_a: \text{parameter} \neq \text{value}$ (Two-tailed) |
 
 ### General Outline of a Hypothesis Test
 
-| Step | Description                                                                                         |
-| ---- | --------------------------------------------------------------------------------------------------- |
-| 1    | Define Hypotheses: State $H_0$ and $H_a$ clearly in terms of the population parameter               |
-| 2    | Simulate Under $H_0$ / Collect Data: Understand what [[Mainfolder/Statistics/sampling distribution\|sampling distribution]] look like if $H_0$ were true |
-| 3    | Compare Statistic to Null: Calculate a test statistic                                               |
-| 4    | Compute P-value: Calculate the probability of observing a test statistic as extreme or more extreme |
-| 5    | Interpret/Conclude: Based on the p-value, decide whether to reject $H_0$                            |
+| Step | Description | Key Components |
+|------|-------------|----------------|
+| 1 | Define Hypotheses | State $H_0$ and $H_a$ clearly |
+| 2 | Simulate/Collect | Understand [[Mainfolder/Statistics/sampling distribution\|sampling distribution]] under $H_0$ |
+| 3 | Compare | Calculate test statistic |
+| 4 | Compute | Calculate p-value |
+| 5 | Interpret | Make decision based on p-value |
 
 ### Related Topics
 * [[Mainfolder/Statistics/Hypothesis Testing Key Concepts\|Hypothesis Testing Key Concepts]] - Detailed explanation of null distribution, test statistics, and p-values

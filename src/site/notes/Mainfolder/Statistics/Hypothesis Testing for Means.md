@@ -2,49 +2,105 @@
 {"dg-publish":true,"permalink":"/Mainfolder/Statistics/Hypothesis Testing for Means/"}
 ---
 
+# Hypothesis Tests for Means
 
-## Hypothesis Testing for Means
+## Test Selection Guide
 
-### Overview
+| Test Type | When to Use | Key Assumptions | Example |
+|-----------|-------------|-----------------|---------|
+| Single Mean z-test | Known $\sigma$, $n \geq 30$ | Normal or large sample | Testing if mean height = 170cm |
+| Single Mean t-test | Unknown $\sigma$ | Normal or large sample | Testing if mean score > 75 |
+| Two Mean z-test | Known $\sigma$s | Independent samples | Comparing two production lines |
+| Two Mean t-test | Unknown $\sigma$s | Independent samples | Comparing treatment groups |
 
-| Aspect | Description |
-|--------|-------------|
-| Purpose | Test claims about population means |
-| Common Tests | - One-sample t-test <br> - Two-sample t-test <br> - Paired t-test |
-| Assumptions | - Random sampling <br> - Normal distribution or large sample size <br> - Equal variances (for two-sample tests) |
+## Single Mean Test
 
-### One-Sample t-test
+### Hypotheses Structure
 
-| Component | Description |
-|-----------|-------------|
-| Purpose | Test if population mean equals a specific value |
-| Hypotheses | $H_0: \mu = \mu_0$ <br> $H_a: \mu \neq \mu_0$ (or $>$, $<$) |
-| Test Statistic | $t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}}$ |
-| Degrees of Freedom | $n-1$ |
+| Type | Symbolic Form | Example |
+|------|--------------|---------|
+| Null | $H_0: \mu = \mu_0$ | $H_0: \mu = 100$ |
+| Right-tailed | $H_a: \mu > \mu_0$ | $H_a: \mu > 100$ |
+| Left-tailed | $H_a: \mu < \mu_0$ | $H_a: \mu < 100$ |
+| Two-tailed | $H_a: \mu \neq \mu_0$ | $H_a: \mu \neq 100$ |
 
-### Two-Sample t-test
+### Test Statistics
 
-| Component | Description |
-|-----------|-------------|
-| Purpose | Compare means of two independent populations |
-| Hypotheses | $H_0: \mu_1 = \mu_2$ <br> $H_a: \mu_1 \neq \mu_2$ (or $>$, $<$) |
-| Test Statistic | $t = \frac{(\bar{x}_1 - \bar{x}_2) - (\mu_1 - \mu_2)}{s_p\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}$ |
-| Degrees of Freedom | $n_1 + n_2 - 2$ |
+| Scenario | Test Statistic | Distribution | Degrees of Freedom |
+|----------|---------------|--------------|-------------------|
+| Known $\sigma$ | $Z = \frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}}$ | $Z \sim N(0,1)$ | N/A |
+| Unknown $\sigma$ | $T = \frac{\bar{x} - \mu_0}{s/\sqrt{n}}$ | $T \sim t(df = n-1)$ | $n-1$ |
 
-### Paired t-test
+### Conditions and Verification
 
-| Component | Description |
-|-----------|-------------|
-| Purpose | Compare means of paired/matched observations |
-| Hypotheses | $H_0: \mu_d = 0$ <br> $H_a: \mu_d \neq 0$ (or $>$, $<$) |
-| Test Statistic | $t = \frac{\bar{d} - 0}{s_d/\sqrt{n}}$ |
-| Degrees of Freedom | $n-1$ |
+| Condition | How to Check | Common Issues |
+|-----------|--------------|---------------|
+| Random Sample | Study design | Selection bias |
+| Independence | Context | Time series data |
+| Normality | Plot data or $n \geq 30$ | Skewness, outliers |
 
-### Related Topics
-* [[Mainfolder/Statistics/Hypothesis Testing Basics\|Hypothesis Testing Basics]] - Introduction to hypothesis testing
-* [[Mainfolder/Statistics/Hypothesis Testing Key Concepts\|Hypothesis Testing Key Concepts]] - Core concepts in hypothesis testing
-* [[Mainfolder/Statistics/t-distribution\|t-distribution]] - Distribution used for mean tests
-* [[Mainfolder/Statistics/degrees of freedom\|degrees of freedom]] - Important concept for t-tests
-* [[Mainfolder/Statistics/Standard error\|Standard error]] - Understanding the denominator in test statistics
-* [[Mainfolder/Statistics/sampling distribution\|sampling distribution]] - Foundation for understanding test statistics
-* [[Mainfolder/Statistics/Normal Distribution\|Normal Distribution]] - Related distribution for large samples 
+### P-value Calculations
+
+| Alternative  | Formula          | Rejection Region |     |         |     |            |
+| ------------ | ---------------- | ---------------- | --- | ------- | --- | ---------- |
+| Right-tailed | $P(Z > z_{obs})$ | Upper tail       |     |         |     |            |
+| Left-tailed  | $P(Z < z_{obs})$ | Lower tail       |     |         |     |            |
+| Two-tailed   | $2 \times P(     | Z                | >   | z_{obs} | )$  | Both tails |
+
+## Difference of Means Test
+
+### Hypotheses Structure
+
+| Type        | Symbolic Form                      | Verbal Description          |
+| ----------- | ---------------------------------- | --------------------------- |
+| Null        | $H_0: \mu_1 - \mu_2 = 0$           | No difference between means |
+| Alternative | $H_a: \mu_1 - \mu_2$ [<, >, ≠] $0$ | Difference exists           |
+
+### Test Statistics
+
+| Scenario | Formula | Notes |
+|----------|---------|--------|
+| Known $\sigma$s | $Z = \frac{(\bar{x}_1 - \bar{x}_2)}{\sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}}$ | Rarely used |
+| Unknown $\sigma$s | $T = \frac{(\bar{x}_1 - \bar{x}_2)}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}$ | Most common |
+
+### Degrees of Freedom Options
+
+| Method | Formula | When to Use |
+|--------|---------|------------|
+| Conservative | $df = \min(n_1-1, n_2-1)$ | Quick approximation |
+| Welch's | Complex formula | More accurate |
+
+### Common Applications
+
+| Application | Example | Key Considerations |
+|-------------|---------|-------------------|
+| Treatment Effects | Drug vs Placebo | Randomization |
+| Before/After | Training Program | Paired data option |
+| Group Comparisons | Method A vs B | Independence |
+
+## Best Practices
+
+### Reporting Checklist
+
+| Component | What to Include | Example |
+|-----------|----------------|---------|
+| Context | Research question | "Testing if new method improves scores" |
+| Conditions | Verification of assumptions | "Data normally distributed (p > 0.05)" |
+| Test Details | Statistic, df, p-value | "t(28) = 2.45, p = 0.021" |
+| Conclusion | Interpretation | "Evidence suggests improvement (d = 0.6)" |
+
+### Interpretation Guidelines
+
+| Result | Statistical Conclusion | Practical Interpretation |
+|--------|----------------------|------------------------|
+| Small p-value | Reject $H_0$ | Evidence of effect |
+| Large p-value | Fail to reject $H_0$ | Insufficient evidence |
+| Effect size | Magnitude of difference | Practical importance |
+
+## Related Topics
+- [[Mainfolder/Statistics/Hypothesis Testing Basics\|Hypothesis Testing Basics]] - General framework
+- [[Mainfolder/Statistics/Hypothesis Testing Key Concepts\|Hypothesis Testing Key Concepts]] - Core concepts
+- [[Mainfolder/Statistics/t-distribution\|t-distribution]] - Key distribution for mean tests
+- [[Mainfolder/Statistics/Standard error\|Standard error]] - Understanding uncertainty
+- [[Mainfolder/Statistics/Confidence Interval\|Confidence Interval]] - Complementary inference approach
+- [[Mainfolder/Statistics/degrees of freedom\|degrees of freedom]] - Important for t-tests 

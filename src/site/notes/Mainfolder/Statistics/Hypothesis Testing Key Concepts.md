@@ -2,41 +2,93 @@
 {"dg-publish":true,"permalink":"/Mainfolder/Statistics/Hypothesis Testing Key Concepts/"}
 ---
 
+# Hypothesis Testing Key Concepts
 
-## Key Concepts in Hypothesis Testing
+## Test Selection Guide
 
-### Null Distribution
+| Question Type | Test to Use | Key Conditions |
+|--------------|-------------|----------------|
+| Single Mean | t-test or z-test | Normal data or $n \geq 30$ |
+| Difference in Means | Two-sample t-test | Independent samples |
+| Single Proportion | z-test | $np_0 \geq 10$, $n(1-p_0) \geq 10$ |
+| Difference in Proportions | Two-proportion z-test | Independent samples |
 
-| Aspect | Description |
-|--------|-------------|
-| Definition | Distribution of sample statistics if $H_0$ were true |
-| Purpose | Simulates the world under "no effect" assumption |
-| Characteristics | - Center: Hypothesized value from $H_0$ <br> - Spread: Depends on [[Mainfolder/Statistics/Standard error\|Standard error]] under $H_0$ |
-| Common Forms | [[Mainfolder/Statistics/Normal Distribution\|Normal Distribution]] for means/proportions (under [[Mainfolder/Statistics/Central Limit Theorem\|Central Limit Theorem]]) |
+## Test Statistics and Evidence
 
-### Test Statistic
+### Anatomy of Test Statistics
 
-| Component | Description |
-|-----------|-------------|
-| Purpose | Standardized value for comparing sample statistic to null distribution |
-| Formula | $\frac{\text{Sample Statistic} - \text{Null Hypothesis Value}}{\text{Standard Error}}$ |
-| Interpretation | Measures difference in terms of standard errors |
-| Distribution | [[Mainfolder/Statistics/Normal Distribution\|Normal Distribution]] or [[Mainfolder/Statistics/t-distribution\|t-distribution]] depending on test type |
+| Type | Formula | When to Use | Null Distribution |
+|------|---------|-------------|------------------|
+| Z-statistic | $Z = \frac{\text{estimate} - \text{null value}}{\text{standard error}}$ | Large samples, known $\sigma$ | $N(0,1)$ |
+| T-statistic | $T = \frac{\bar{x} - \mu_0}{s/\sqrt{n}}$ | Small samples or unknown $\sigma$ | $t(df)$ |
 
-### P-value
+### Components of Test Statistics
 
-| Aspect | Description |
-|--------|-------------|
-| Definition | Probability of observing a statistic as extreme or more extreme than observed, assuming $H_0$ is true |
-| Interpretation | <table><tr><td>Small p-value</td><td>Strong evidence against $H_0$</td></tr><tr><td>Large p-value</td><td>Weak or no evidence against $H_0$</td></tr></table> |
-| Calculation | Depends on $H_a$: <br> - Right-tailed: Area to right of test statistic <br> - Left-tailed: Area to left of test statistic <br> - Two-tailed: Area in both tails |
+| Component | Description | Importance |
+|-----------|-------------|------------|
+| Numerator | Distance between observed and null | Measures effect size |
+| Denominator | [[Mainfolder/Statistics/Standard error\|Standard error]] | Measures precision |
+| Absolute Value | Distance from zero | Strength of evidence |
 
-### Related Topics
-* [[Mainfolder/Statistics/Hypothesis Testing Basics\|Hypothesis Testing Basics]] - Introduction to hypothesis testing
-* [[Mainfolder/Statistics/Hypothesis Testing for Proportions\|Hypothesis Testing for Proportions]] - Application of these concepts to proportion tests
-* [[Mainfolder/Statistics/Hypothesis Testing for Means\|Hypothesis Testing for Means]] - Application of these concepts to mean tests
-* [[Mainfolder/Statistics/Critical Values\|Critical Values]] - Important values for making decisions in hypothesis testing
-* [[Mainfolder/Statistics/Standard error\|Standard error]] - Understanding the denominator in test statistics
-* [[Mainfolder/Statistics/degrees of freedom\|degrees of freedom]] - Important concept for t-distribution tests
-* [[Mainfolder/Statistics/sampling distribution\|sampling distribution]] - Foundation for understanding null distributions
-* [[Mainfolder/Statistics/Normal Distribution\|Normal Distribution]] - Common distribution for test statistics 
+### Null Distribution Properties
+
+| Distribution | Used For | Key Features |
+|--------------|----------|--------------|
+| [[Mainfolder/Statistics/Normal Distribution\|Normal Distribution]] | Large samples, proportions | Symmetric, uses z-scores |
+| [[Mainfolder/Statistics/t-distribution\|t-distribution]] | Small samples, means | Heavier tails, uses df |
+
+## Decision Making Framework
+
+### Types of Errors
+
+| Decision vs Reality | $H_0$ True | $H_0$ False |
+|-------------------|------------|-------------|
+| Reject $H_0$ | Type I Error ($\alpha$) | Correct Decision |
+| Fail to reject $H_0$ | Correct Decision | Type II Error ($\beta$) |
+
+### Error Control Parameters
+
+| Parameter | Symbol | Typical Values | Meaning |
+|-----------|--------|----------------|----------|
+| Significance Level | $\alpha$ | 0.05, 0.01 | Type I error rate |
+| Power | $1-\beta$ | 0.80, 0.90 | Correct rejection rate |
+| Sample Size | $n$ | Varies | Affects both errors |
+
+### P-value Guidelines
+
+| P-value Range | Traditional Interpretation | Better Practice |
+|---------------|---------------------------|----------------|
+| $p < 0.01$ | Strong evidence | Report exact p-value |
+| $0.01 \leq p < 0.05$ | Moderate evidence | Consider practical significance |
+| $0.05 \leq p < 0.10$ | Weak evidence | Discuss uncertainty |
+| $p \geq 0.10$ | No evidence | Note limitations |
+
+## Best Practices
+
+### Reporting Checklist
+
+| Component | What to Include | Why Important |
+|-----------|----------------|---------------|
+| Hypotheses | Clear $H_0$ and $H_a$ | Defines research question |
+| Conditions | All assumptions checked | Validates test choice |
+| Test Statistic | Formula and calculation | Shows process |
+| P-value | Exact value | Indicates evidence strength |
+| Effect Size | Practical difference | Shows practical significance |
+| [[Mainfolder/Statistics/Confidence Interval\|Confidence Interval]] | Range estimate | Shows precision |
+
+### Common Pitfalls to Avoid
+
+| Pitfall | Consequence | Prevention |
+|---------|-------------|------------|
+| Multiple Testing | Increased Type I error | Adjust $\alpha$ level |
+| P-hacking | Invalid conclusions | Pre-specify analyses |
+| Binary Decisions | Loss of information | Report effect sizes |
+| Ignoring Assumptions | Invalid results | Check conditions |
+
+## Related Topics
+- [[Mainfolder/Statistics/Hypothesis Testing Basics\|Hypothesis Testing Basics]] - Introduction and overview
+- [[Mainfolder/Statistics/Hypothesis Testing for Means\|Hypothesis Testing for Means]] - Tests for population means
+- [[Mainfolder/Statistics/Hypothesis Testing for Proportions\|Hypothesis Testing for Proportions]] - Tests for population proportions
+- [[Mainfolder/Statistics/Critical Values\|Critical Values]] - Alternative to p-values
+- [[Mainfolder/Statistics/Standard error\|Standard error]] - Measure of estimate precision
+- [[Mainfolder/Statistics/sampling distribution\|sampling distribution]] - Foundation for hypothesis tests 

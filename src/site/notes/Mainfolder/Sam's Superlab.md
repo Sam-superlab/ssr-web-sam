@@ -12,6 +12,7 @@
  - [[Mainfolder/CSC\|CSC]] (Grinnell CSC-151)
  - [[Mainfolder/Statistics/Statistics\|Statistics]] (Grinnell STA-209)
  - [[Mainfolder/Mathematics/Linear Algebra\|Linear Algebra]] (Grinnell MAT-215)
+ - [[Mainfolder/AI/Deep Learning Overview\|Deep Learning Overview]]
 
 
 “Wir müssen wissen. Wir werden wissen." (_We must know_. _We will know_.)---David Hilbert

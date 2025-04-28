@@ -10,7 +10,7 @@
 # Linear system and matrix
 - [[Mainfolder/Mathematics/Linear system\|Linear system]]
 - [[Mainfolder/Mathematics/Matrix\|Matrix]]
-- [[System of Equations\|System of Equations]]
+- [[Mainfolder/Mathematics/System of Equations\|System of Equations]]
 - [[Mainfolder/Mathematics/Span\|Span]]
 - 
 

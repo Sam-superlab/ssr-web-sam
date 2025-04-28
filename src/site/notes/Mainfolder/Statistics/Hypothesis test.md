@@ -27,6 +27,7 @@ This is the main hub for hypothesis testing topics. The content has been organiz
    * Single population mean tests
    * Difference of two population means tests
 
+1. [[Mainfolder/Statistics/Chi-Square Tests\|Chi-Square Tests]]
 ## Related Topics
 * [[Mainfolder/Statistics/Central Limit Theorem\|Central Limit Theorem]] - Understanding the theoretical foundation for hypothesis testing
 * [[Mainfolder/Statistics/Critical Values\|Critical Values]] - Important values for making decisions in hypothesis testing

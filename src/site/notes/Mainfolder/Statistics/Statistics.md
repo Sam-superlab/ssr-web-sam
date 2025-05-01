@@ -17,6 +17,8 @@
 12. [[Mainfolder/Statistics/Confidence Interval\|Confidence Interval]]
 13. [[Mainfolder/Statistics/Bootstrap\|Bootstrap]]
 14. [[Mainfolder/Statistics/Hypothesis test\|Hypothesis test]]
+15. [[Mainfolder/Statistics/ANOVA\|ANOVA]]
+16. 
 
 
 

@@ -22,11 +22,12 @@ $$
 $$
 
 ### Key Properties
-| Property | Formula | Description |
-|----------|---------|-------------|
-| Mean | $\mu = k$ | Center of the distribution |
-| Variance | $\sigma^2 = 2k$ | Spread of the distribution |
-| [[Mainfolder/Statistics/degrees of freedom\|Degrees of Freedom]] | $df = k$ | Shape parameter of the distribution |
+| Property               | Formula            | Description                |                                     |
+| ---------------------- | ------------------ | -------------------------- | ----------------------------------- |
+| Mean                   | $\mu = k$          | Center of the distribution |                                     |
+| Variance               | $\sigma^2 = 2k$    | Spread of the distribution |                                     |
+| [[Mainfolder/Statistics/degrees of freedom\|degrees of freedom]] | Degrees of Freedom | $df = k$                   | Shape parameter of the distribution |
+|                        |                    |                            |                                     |
 
 ## 3. The Chi-Square Test Statistic
 

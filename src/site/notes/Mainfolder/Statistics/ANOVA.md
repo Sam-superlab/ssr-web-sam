@@ -18,22 +18,22 @@ ANOVA tests the following hypotheses regarding the means (μ) of *k* different g
 
 ## 3. The Core Idea: Partitioning Variance
 
-Although ANOVA tests for differences in means, it does so by analyzing [[Variance\|variance]]. The fundamental idea is that the total variability in a dataset can be broken down into two components:
+Although ANOVA tests for differences in means, it does so by analyzing [[Variance\|Variance]]. The fundamental idea is that the total variability in a dataset can be broken down into two components:
 
 1. Variability within each group (also called error or residual variability)
 2. Variability between the groups
 
-The [[F-distribution\|F-statistic]] compares the magnitude of these two sources of variability.
+The [[Mainfolder/Statistics/F-distribution\|F-statistic]] compares the magnitude of these two sources of variability.
 
 ## 4. Key Components and Calculations
 
 ### Sums of Squares
 
-| Component | Formula | Description |
-|-----------|---------|-------------|
-| Total Sum of Squares (SST) | $SST = \sum_{all i,j} (x_{ij} - \bar{x})^2$ | Total variability around overall mean |
-| Sum of Squares Between Groups (SSG) | $SSG = \sum n_i (\bar{x}_i - \bar{x})^2$ | Variability between group means |
-| Sum of Squared Errors (SSE) | $SSE = \sum_{all i,j} (x_{ij} - \bar{x}_i)^2$ or $\sum (n_i - 1) s_i^2$ | Variability within groups |
+| Component                           | Formula                                                                 | Description                           |
+| ----------------------------------- | ----------------------------------------------------------------------- | ------------------------------------- |
+| Total Sum of Squares (SST)          | $SST = \sum_{all i,j} (x_{ij} - \bar{x})^2$                             | Total variability around overall mean |
+| Sum of Squares Between Groups (SSG) | $SSG = \sum n_i (\bar{x}_i - \bar{x})^2$                                | Variability between group means       |
+| Sum of Squared Errors (SSE)         | $SSE = \sum_{all i,j} (x_{ij} - \bar{x}_i)^2$ or $\sum (n_i - 1) s_i^2$ | Variability within groups             |
 
 ### Degrees of Freedom
 
@@ -62,7 +62,7 @@ A large F-statistic suggests that the variability between groups is large relati
 
 ## 6. F Distribution and p-value
 
-- The F-statistic follows an [[F-distribution\|F-distribution]] with (k-1, n-k) degrees of freedom
+- The F-statistic follows an [[Mainfolder/Statistics/F-distribution\|F-distribution]] with (k-1, n-k) degrees of freedom
 - The p-value represents the probability of observing an F-statistic as large as or larger than the calculated value, assuming H₀ is true
 - A small p-value (< 0.05) indicates strong evidence against H₀
 

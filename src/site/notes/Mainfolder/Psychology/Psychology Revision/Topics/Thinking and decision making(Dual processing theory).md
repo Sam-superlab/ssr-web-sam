@@ -5,7 +5,7 @@
 #con 
 **[[Mainfolder/Psychology/Psychology Revision/Concepts/Thinking\|Thinking]]** is the process of using knowledge and information to make plans, interpret the world, and make predictions about the world in which we live in.
   
-**[[Mainfolder/Psychology/Psychology Revision/Concepts/Decision making\|Decision making]]** 
+**[[Mainfolder/Statistics/Decision Making\|Decision making]]** 
 
 ## Dual processing theory
 **The Dual Process Model** of thinking and decision-making postulates that there are two basic modes of thinking.

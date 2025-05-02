@@ -27,7 +27,14 @@ This is the main hub for hypothesis testing topics. The content has been organiz
    * Single population mean tests
    * Difference of two population means tests
 
-1. [[Mainfolder/Statistics/Chi-Square Tests\|Chi-Square Tests]]
+5. [[Mainfolder/Statistics/Decision Making\|Decision Making]]
+   * Decision making process
+   * P-value and decision making
+
+6. [[Mainfolder/Statistics/Chi-Square Tests\|Chi-Square Tests]]
+   * Chi-square tests for independence
+   * Chi-square tests for goodness of fit
+
 ## Related Topics
 * [[Mainfolder/Statistics/Central Limit Theorem\|Central Limit Theorem]] - Understanding the theoretical foundation for hypothesis testing
 * [[Mainfolder/Statistics/Critical Values\|Critical Values]] - Important values for making decisions in hypothesis testing

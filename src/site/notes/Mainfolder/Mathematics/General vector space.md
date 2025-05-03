@@ -37,9 +37,9 @@
 
 >[!theorem] Proposition 4.1.11
 >Let $V$ be a vector space.
->1. $0 \cdot \vec{v} = \vec{0}$ for all $\vec{v} \in V$
->2. $c \cdot \vec{0} = \vec{0}$ for all $c \in \mathbb{R}$
->3. $(-1) \cdot \vec{v} = -\vec{v}$ for all $\vec{v} \in V$
+>3. $0 \cdot \vec{v} = \vec{0}$ for all $\vec{v} \in V$
+>4. $c \cdot \vec{0} = \vec{0}$ for all $c \in \mathbb{R}$
+>5. $(-1) \cdot \vec{v} = -\vec{v}$ for all $\vec{v} \in V$
 
 >[!theorem] Proposition 4.1.16
 >Let $V$ be a vector space and let $\vec{u}_1, \vec{u}_2, \dots, \vec{u}_n \in V$. The set $Span(\vec{u}_1, \vec{u}_2, \dots, \vec{u}_n)$ is a subspace of $V$
@@ -216,6 +216,37 @@ In short, Section 4.5 defines the crucial concept of a basis as the optimal blen
 >Let $\vec{u}_1, \vec{u}_2, \dots, \vec{u}_n \in \mathbb{R}^m$, and let $W = Span(\vec{u}_1, \vec{u}_2, \dots, \vec{u}_n)$. Let $A$ be the $m \times n$ matrix whose $i^{th}$ column is $\vec{u}_i$, and let $B$ be an echelon form of $A$. If we build the sequence consisting only of those $\vec{u}_i$ such that the $i^{th}$ column of $B$ has a leading entry, then we obtain a basis for $W$.
 
 ## Section 4.6: Dimension
+**Core Idea of Section 4.6: Defining the "Size" of a Vector Space**
+
+After establishing bases (Section 4.5) as "efficient" sets that both span the space and have no redundancy (linear independence), a natural question arises: Does every basis for a given vector space $V$ have the same number of elements? Section 4.6 answers this question affirmatively and uses it to define the **dimension** of the space.
+
+**The Rationale - Why Dimension is Well-Defined:**
+
+1.  **The Problem:** Vector spaces can have many different bases. For the concept of "dimension" to be meaningful as an intrinsic property of the space itself, we need to know that the number of vectors in a basis doesn't depend on *which* basis we happen to choose.
+2.  **Key Result (Theorem 4.6.2):** This theorem is the cornerstone. It states that if a vector space $V$ can be spanned by $n$ vectors $(\vec{u}_1, \dots, \vec{u}_n)$, then any sequence $(\vec{w}_1, \dots, \vec{w}_m)$ with more than $n$ vectors (i.e., $m > n$) *must* be linearly dependent.
+    * **Rationale behind Thm 4.6.2:** The proof uses the **Steinitz Exchange Lemma (Proposition 4.6.1)** repeatedly. The idea is that you can systematically replace vectors in the spanning set $(\vec{u}_i)$ with vectors from the linearly independent set $(\vec{w}_j)$ while maintaining the span. Since you start with only $n$ vectors spanning the space, you can swap in at most $n$ of the $\vec{w}_j$'s. If you have more than $n$ vectors in the $\vec{w}$ sequence ($m > n$), then by the time you consider $\vec{w}_{n+1}$, it *must* be expressible as a linear combination of the preceding $\vec{w}_1, \dots, \vec{w}_n$ (which now span the space), proving the sequence $(\vec{w}_1, \dots, \vec{w}_m)$ is linearly dependent.
+3.  **Consequence (Corollary 4.6.3):** Taking the contrapositive of Theorem 4.6.2, we get: If a space $V$ is spanned by $(\vec{u}_1, \dots, \vec{u}_n)$ and $(\vec{w}_1, \dots, \vec{w}_m)$ is linearly independent in $V$, then $m \le n$. In words: the size of any linearly independent set is less than or equal to the size of any spanning set.
+4.  **Invariance of Basis Size (Corollary 4.6.4):** This directly uses the previous corollary. If you have two bases, $\alpha$ with $n$ vectors and $\beta$ with $m$ vectors:
+    * Since $\alpha$ spans and $\beta$ is linearly independent, $m \le n$.
+    * Since $\beta$ spans and $\alpha$ is linearly independent, $n \le m$.
+    * Therefore, $m = n$.
+5.  **Definition of Dimension (Definition 4.6.5):** Because Corollary 4.6.4 guarantees that *all* bases for a given vector space $V$ (if any exist) have the same number of elements, we can unambiguously define the **dimension** of $V$, denoted $dim(V)$, as this common number.
+    * **Rationale:** Dimension captures the intrinsic "size" or number of "degrees of freedom" or independent "directions" within the vector space, regardless of the specific basis chosen to measure it.
+
+**The Rationale - Consequences and Uses of Dimension:**
+
+Once dimension is well-defined, it becomes a powerful tool:
+
+1.  **Basis Shortcut (Proposition 4.6.7):** If you know $dim(V) = n$, then checking if a sequence of exactly $n$ vectors $(\vec{u}_1, \dots, \vec{u}_n)$ is a basis becomes easier. You only need to check *one* of the two conditions:
+    * If it's linearly independent, it *must* also span $V$.
+    * If it spans $V$, it *must* also be linearly independent.
+    * **Rationale:** This follows from Theorem 4.6.2 and its corollary. For instance, if you have $n$ linearly independent vectors, but they didn't span $V$, you could add another vector $\vec{w} \notin Span(\vec{u}_1, \dots, \vec{u}_n)$ to get $n+1$ linearly independent vectors (Prop 4.6.9), which contradicts the fact that the $n$-dimensional space $V$ cannot contain $n+1$ linearly independent vectors (Cor 4.6.3). A similar argument works the other way.
+2.  **Subspace Dimension (Proposition 4.6.8):** Any subspace $W$ of a finite-dimensional vector space $V$ is also finite-dimensional, and $dim(W) \le dim(V)$.
+    * **Rationale:** You can construct a basis for $W$ by starting with a linearly independent set in $W$ and extending it (using Prop 4.6.10, below). This process must stop because $W$ is contained in $V$, and you can't have more linearly independent vectors in $W$ than the dimension of $V$. This guarantees $W$ has a finite basis, and the number of vectors must be less than or equal to $dim(V)$.
+3.  **Extending Linearly Independent Sets (Proposition 4.6.10):** Any linearly independent sequence in a finite-dimensional vector space can be extended to form a basis for that space.
+    * **Rationale:** Start with the linearly independent set. If it doesn't already span the whole space, find a vector not in its span and add it to the set; the new set remains linearly independent (Prop 4.6.9). Repeat this process. Since the dimension is finite, you can't keep adding vectors indefinitely while maintaining linear independence (by Thm 4.6.2). The process must stop when the set spans the space, at which point it is a basis. This confirms that linearly independent sets act as valid starting points or "skeletons" for building bases.
+
+In summary, Section 4.6 leverages the interplay between spanning sets and linearly independent sets (specifically Theorem 4.6.2) to rigorously establish that the size of a basis is an invariant property of a vector space, allowing the definition of **dimension**. Dimension then becomes a key characteristic used to understand the structure of the space, relationships between spaces and subspaces, and provides useful criteria for determining if a set of vectors forms a basis.
 
 >[!theorem] Proposition 4.6.1 (Steinitz Exchange)
 >Let $V$ be a vector space and let $\vec{u}_1, \vec{u}_2, \dots, \vec{u}_n, \vec{w} \in V$. Suppose that we have $d_1, \dots, d_n \in \mathbb{R}$ with $\vec{w} = d_1\vec{u}_1 + \dots + d_k\vec{u}_k + \dots + d_n\vec{u}_n$. If $d_k \ne 0$, then $Span(\vec{u}_1, \dots, \vec{u}_k, \dots, \vec{u}_n) = Span(\vec{u}_1, \dots, \vec{u}_{k-1}, \vec{w}, \vec{u}_{k+1}, \dots, \vec{u}_n)$.

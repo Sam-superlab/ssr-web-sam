@@ -18,7 +18,7 @@ ANOVA tests the following hypotheses regarding the means (μ) of *k* different g
 
 ## 3. The Core Idea: Partitioning Variance
 
-Although ANOVA tests for differences in means, it does so by analyzing [[Variance\|Variance]]. The fundamental idea is that the total variability in a dataset can be broken down into two components:
+Although ANOVA tests for differences in means, it does so by analyzing [[Mainfolder/Statistics/Variance\|Variance]]. The fundamental idea is that the total variability in a dataset can be broken down into two components:
 
 1. Variability within each group (also called error or residual variability)
 2. Variability between the groups
@@ -79,12 +79,12 @@ A large F-statistic suggests that the variability between groups is large relati
 For reliable ANOVA results, the following assumptions should be met:
 
 1. [[Mainfolder/Statistics/Normal Distribution\|Normality]]: Observations within each group should be approximately normally distributed
-2. [[Variance\|Homogeneity of Variance]]: Group variances should be approximately equal
-3. [[Independence\|Independence]]: Observations must be independent
+2. [[Mainfolder/Statistics/Variance\|Homogeneity of Variance]]: Group variances should be approximately equal
+3. [[Mainfolder/Statistics/Independence\|Independence]]: Observations must be independent
 
 ## 9. Why Not Multiple t-tests?
 
-- Multiple t-tests inflate the overall [[Type I Error\|Type I error rate]]
+- Multiple t-tests inflate the overall [[Mainfolder/Statistics/Type I Error\|Type I error rate]]
 - ANOVA performs a single test to evaluate all means simultaneously, controlling the overall error rate
 
 ## 10. Post-Hoc Tests

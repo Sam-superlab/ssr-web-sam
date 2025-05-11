@@ -4,6 +4,46 @@
 
 # Hypothesis Tests for Means
 
+## Purpose and Rationale
+
+### Why Test Means?
+Testing means serves several crucial purposes in statistical analysis:
+
+1. **Comparing to Standards**
+   * Evaluate if a process meets specifications
+   * Check if performance matches targets
+   * Verify if measurements align with expected values
+
+2. **Comparing Groups**
+   * Assess treatment effectiveness
+   * Compare different methods or approaches
+   * Evaluate before/after changes
+
+3. **Making Decisions**
+   * Determine if changes are needed
+   * Guide process improvements
+   * Inform policy decisions
+
+### The Rationale Behind Mean Tests
+
+1. **Why Means Matter**
+   * Means are fundamental measures of central tendency
+   * They're sensitive to changes in the population
+   * They're mathematically tractable and well-understood
+   * They form the basis for many other statistical methods
+
+2. **Why Different Tests Exist**
+   * Population standard deviation known vs unknown
+   * Sample size considerations
+   * Single group vs multiple groups
+   * Independent vs dependent samples
+
+3. **Why Conditions Matter**
+   * Ensures valid statistical inference
+   * Protects against incorrect conclusions
+   * Maintains the integrity of the testing process
+   * Enables proper interpretation of results
+
 ## Test Selection Guide
 
 | Test Type | When to Use | Key Assumptions | Example |

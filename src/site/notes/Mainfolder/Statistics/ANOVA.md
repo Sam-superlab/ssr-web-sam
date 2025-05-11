@@ -8,6 +8,19 @@
 
 ANOVA is a collection of statistical models used to analyze differences among the means of multiple groups. The primary goal is to determine if there is a statistically significant difference between the means of two or more groups.
 
+### Purpose and Focus
+
+1. **Primary Purpose**
+   * Test for differences among multiple group means
+   * Evaluate if observed differences are statistically significant
+   * Provide a framework for comparing more than two groups
+
+2. **Key Focus Areas**
+   * Overall group differences
+   * Relative importance of different sources of variation
+   * Statistical significance of group effects
+   * Practical importance of differences
+
 ## 2. Hypotheses
 
 ANOVA tests the following hypotheses regarding the means (μ) of *k* different groups:
@@ -24,6 +37,19 @@ Although ANOVA tests for differences in means, it does so by analyzing [[Mainfol
 2. Variability between the groups
 
 The [[Mainfolder/Statistics/F-distribution\|F-statistic]] compares the magnitude of these two sources of variability.
+
+### Rationale for Using Variance
+
+1. **Why Variance Instead of Means Directly**
+   * Variance provides a measure of spread that's sensitive to differences
+   * Allows comparison of group differences relative to within-group variation
+   * Provides a standardized way to assess differences
+
+2. **Advantages of Variance Analysis**
+   * Handles multiple groups efficiently
+   * Controls Type I error rate
+   * Provides a single, comprehensive test
+   * Allows for post-hoc analysis
 
 ## 4. Key Components and Calculations
 
@@ -60,6 +86,18 @@ $$
 
 A large F-statistic suggests that the variability between groups is large relative to the variability within groups, providing evidence against the null hypothesis.
 
+### Interpretation of F-statistic
+
+1. **Large F-value**
+   * Indicates strong evidence against H₀
+   * Suggests significant differences between groups
+   * Relative to within-group variation
+
+2. **F-value close to 1**
+   * Suggests group means are similar
+   * Provides weak evidence against H₀
+   * Indicates within-group variation dominates
+
 ## 6. F Distribution and p-value
 
 - The F-statistic follows an [[Mainfolder/Statistics/F-distribution\|F-distribution]] with (k-1, n-k) degrees of freedom
@@ -82,14 +120,117 @@ For reliable ANOVA results, the following assumptions should be met:
 2. [[Mainfolder/Statistics/Variance\|Homogeneity of Variance]]: Group variances should be approximately equal
 3. [[Mainfolder/Statistics/Independence\|Independence]]: Observations must be independent
 
+### Checking Assumptions
+
+1. **Normality**
+   * Use normal probability plots
+   * Consider sample size (n ≥ 30 often sufficient)
+   * Check for skewness and outliers
+
+2. **Homogeneity of Variance**
+   * Levene's test
+   * Bartlett's test
+   * Visual inspection of group spreads
+
+3. **Independence**
+   * Consider study design
+   * Check for repeated measures
+   * Evaluate sampling method
+
 ## 9. Why Not Multiple t-tests?
 
 - Multiple t-tests inflate the overall [[Mainfolder/Statistics/Type I Error\|Type I error rate]]
 - ANOVA performs a single test to evaluate all means simultaneously, controlling the overall error rate
 
+### Multiple Testing Problem
+
+1. **Error Rate Inflation**
+   * Each test has α probability of Type I error
+   * Multiple tests increase overall error rate
+   * Family-wise error rate grows with number of tests
+
+2. **ANOVA Solution**
+   * Single test controls overall error rate
+   * More powerful than multiple t-tests
+   * Provides framework for post-hoc analysis
+
 ## 10. Post-Hoc Tests
 
 If ANOVA is significant, post-hoc tests (e.g., [[Tukey HSD\|Tukey's HSD]]) can identify which specific group means differ while controlling the overall error rate.
+
+### Common Post-Hoc Methods
+
+1. **Tukey's HSD**
+   * Controls family-wise error rate
+   * Performs all pairwise comparisons
+   * Provides confidence intervals
+
+2. **Other Methods**
+   * Bonferroni correction
+   * Scheffe's method
+   * Fisher's LSD
+
+## 11. Connection to Regression
+
+ANOVA can be viewed as a special case of linear regression where:
+* Predictor variables are categorical
+* Response variable is quantitative
+* F-statistic tests overall model significance
+* Provides framework for more complex analyses
+
+## Types of ANOVA
+
+### One-way ANOVA
+- Single factor with multiple levels
+- Tests for differences among group means
+- Example: Comparing test scores across different teaching methods
+
+### Two-way ANOVA
+- Two factors with potential interaction
+- Tests main effects and interaction effects
+- Example: Studying effect of both teaching method and class size on test scores
+
+### MANOVA (Multivariate ANOVA)
+- Multiple dependent variables
+- Tests for differences across multiple response variables
+- Example: Comparing both test scores and student satisfaction across teaching methods
+
+### Repeated Measures ANOVA
+- Same subjects measured multiple times
+- Accounts for within-subject correlation
+- Example: Measuring student performance before, during, and after a teaching intervention
+
+### Post-hoc Tests
+
+When ANOVA indicates significant differences, post-hoc tests help identify which specific groups differ:
+
+1. **Tukey's HSD (Honestly Significant Difference)**
+   - Controls family-wise error rate
+   - Performs all pairwise comparisons
+   - Provides confidence intervals
+
+2. **Bonferroni Correction**
+   - Adjusts significance level for multiple comparisons
+   - Conservative approach
+   - Good for small number of comparisons
+
+3. **Scheffé's Method**
+   - Most conservative post-hoc test
+   - Controls family-wise error rate
+   - Good for complex comparisons
+
+4. **Fisher's LSD (Least Significant Difference)**
+   - Less conservative than others
+   - Higher power but higher Type I error rate
+   - Good for planned comparisons
+
+### Connection to Regression
+
+ANOVA can be viewed as a special case of regression where:
+- Predictor variables are categorical
+- Response variable is quantitative
+- F-statistic tests overall model significance
+- Provides framework for more complex analyses
 
 ## Related Topics
 - [[Mainfolder/Statistics/Hypothesis Testing Basics\|Hypothesis Testing Basics]]
@@ -97,3 +238,7 @@ If ANOVA is significant, post-hoc tests (e.g., [[Tukey HSD\|Tukey's HSD]]) can i
 - [[Mainfolder/Statistics/degrees of freedom\|degrees of freedom]]
 - [[Mainfolder/Statistics/Critical Values\|Critical Values]]
 - [[Mainfolder/Statistics/Confidence Interval\|Confidence Interval]]
+- [[Mainfolder/Statistics/Effect Size\|Effect Size]]
+- [[Mainfolder/Statistics/Power Analysis\|Power Analysis]]
+- [[Multiple Comparisons\|Multiple Comparisons]]
+- [[Mainfolder/Statistics/Regression\|Regression]]

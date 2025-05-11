@@ -3,129 +3,107 @@
 ---
 
 
-# Chi-Square (χ²) Tests
+# Chi-Square Tests
 
-## 1. Introduction
+## Purpose and Rationale
 
-Chi-Square (χ²) tests are statistical methods primarily used for analyzing [[Mainfolder/Statistics/Categorical Variable\|categorical data]]. They help determine:
+Chi-square tests are specifically designed for analyzing categorical variables by comparing observed frequency counts with expected counts derived from a null hypothesis. This comparison helps determine if discrepancies between observed and expected counts are statistically significant or likely due to random chance.
 
-- If observed frequencies differ significantly from expected frequencies (Goodness-of-Fit test)
-- If there is a statistically significant [[Mainfolder/Statistics/Association\|association]] between two categorical variables (Test of Independence)
+### Core Applications
 
-## 2. The Chi-Square Distribution
+1. **Goodness-of-Fit Test**
+   * Tests single categorical variable
+   * Compares observed distribution to theoretical model
+   * Evaluates if sample data matches expected proportions
 
-### Mathematical Foundation
-The χ² distribution arises from the sum of squared, independent [[Mainfolder/Statistics/Normal Distribution\|standard normal variables]] ($Z$). If $X_1, X_2, ..., X_k$ are independent standard normal variables ($N(0, 1)$), then:
+2. **Test of Independence**
+   * Tests association between two categorical variables
+   * Evaluates if variables are independent or dependent
+   * Analyzes patterns in contingency tables
 
-$$
-\sum_{i=1}^k X_i^2 \sim \chi^2_k
-$$
+## Test Statistics and Calculations
 
-### Key Properties
-| Property               | Formula            | Description                |                                     |
-| ---------------------- | ------------------ | -------------------------- | ----------------------------------- |
-| Mean                   | $\mu = k$          | Center of the distribution |                                     |
-| Variance               | $\sigma^2 = 2k$    | Spread of the distribution |                                     |
-| [[Mainfolder/Statistics/degrees of freedom\|degrees of freedom]] | Degrees of Freedom | $df = k$                   | Shape parameter of the distribution |
-|                        |                    |                            |                                     |
-
-## 3. The Chi-Square Test Statistic
-
-The core formula for the χ² test statistic:
-
-$$
-\chi^2 = \sum_{i=1}^k \frac{(Observed_i - Expected_i)^2}{Expected_i}
-$$
+### Fundamental Formula
+The core calculation for both tests:
+$\chi^2 = \sum_{i=1}^k \frac{(O_i - E_i)^2}{E_i}$
 
 Where:
-- $k$ = number of categories
-- $Observed_i$ = actual count in category i
-- $Expected_i$ = expected count under [[Mainfolder/Statistics/Hypothesis Testing Basics\|null hypothesis]]
+- $k$ = number of categories/cells
+- $O_i$ = observed count
+- $E_i$ = expected count under $H_0$
 
-## 4. Types of Chi-Square Tests
+### Expected Counts Calculation
 
-### A. Goodness-of-Fit Test
+1. **Goodness-of-Fit Test**
+   * $E_i = N \times p_i^{(0)}$
+   * Where $N$ = total sample size
+   * $p_i^{(0)}$ = proportion specified in $H_0$
 
-#### Purpose
-Tests how well observed frequency distribution fits a hypothesized distribution.
+2. **Test of Independence**
+   * $E_{ij} = \frac{(Row\ Total_i \times Column\ Total_j)}{Grand\ Total}$
+   * For each cell in contingency table
 
-#### Hypotheses
-- $H_0$: Observed proportions match expected proportions
-- $H_A$: At least one proportion differs significantly
+## Theoretical Foundation
 
-#### Example: Multiple Choice Exam
-| Answer | Observed | Expected |
-|--------|----------|----------|
-| A | 6 | 5 |
-| B | 7 | 5 |
-| C | 6 | 5 |
-| D | 2 | 5 |
-| E | 4 | 5 |
+### Chi-Square Distribution
+* Arises from sum of squared standard normal variables
+* If $Z \sim N(0,1)$, then $Z^2 \sim \chi^2_1$
+* Shape determined by degrees of freedom:
+  - Goodness-of-Fit: $df = k - 1$
+  - Test of Independence: $df = (r-1)(c-1)$
 
-#### Example: Coin Flips
-| Heads | Observed | Expected |
-|-------|----------|----------|
-| 0 | 28 | 25 |
-| 1 | 55 | 50 |
-| 2 | 17 | 25 |
+### Hypothesis Testing
 
-Calculation:
-$$
-\chi^2 = \frac{(28-25)^2}{25} + \frac{(55-50)^2}{50} + \frac{(17-25)^2}{25} = 3.42
-$$
+1. **Goodness-of-Fit**
+   * $H_0$: Population proportions equal specified values
+   * $H_a$: At least one proportion differs
+   * Example: $H_0: p_1 = p_2 = p_3 = p_4 = p_5 = 0.2$
 
-### B. Test of Independence
+2. **Test of Independence**
+   * $H_0$: Variables are independent
+   * $H_a$: Variables are dependent
 
-#### Purpose
-Tests [[Mainfolder/Statistics/Association\|association]] between two categorical variables.
+## Applications and Best Practices
 
-#### Hypotheses
-- $H_0$: Variables are [[Mainfolder/Statistics/Conditional Probability and Independence\|independent]]
-- $H_A$: Variables are dependent
+### Common Uses
+* Survey analysis and experimental design
+* Quality control and process monitoring
+* Pattern analysis in categorical data
+* Distribution testing and model validation
 
-#### Expected Counts Formula
-$$
-Expected = \frac{(\text{Row Total}) \times (\text{Column Total})}{\text{Grand Total}}
-$$
+### Key Considerations
 
-## 5. Interpreting Results
+1. **Before Analysis**
+   * Verify categorical nature of variables
+   * Check expected count requirements
+   * Plan adequate sample size
 
-### P-value Interpretation
-| P-value Range | Conclusion | Action |
-|---------------|------------|--------|
-| p < 0.05 | Strong evidence against H₀ | Reject H₀ |
-| p ≥ 0.05 | Weak evidence against H₀ | Fail to reject H₀ |
+2. **During Analysis**
+   * Calculate expected counts
+   * Verify all conditions met
+   * Compute test statistic
 
-See also: [[Mainfolder/Statistics/Hypothesis Testing Key Concepts\|Hypothesis Testing Concepts]]
+3. **After Analysis**
+   * Interpret p-value in context
+   * Consider practical significance
+   * Report findings with effect size
 
-## 6. Pros and Cons
+### Common Pitfalls
 
-### Advantages
-- Versatile for comparing proportions across multiple groups
-- Applicable to any number of categories (k ≥ 2)
-
-### Limitations
-- Only tests non-directional hypotheses
-- Cannot directly test directional alternatives
-
-## 7. R Implementation
-
-### Goodness-of-Fit Example
-```R
-# Example: Multiple Choice Exam
-obs <- c(6, 7, 6, 2, 4)
-chisq.test(obs, p = c(0.2, 0.2, 0.2, 0.2, 0.2))
-
-# Output:
-# Chi-squared test for given probabilities
-# data: obs
-# X-squared = 3.2, df = 4, p-value = 0.5249
-```
-
-Interpretation: The high p-value (0.5249) indicates no significant deviation from expected distribution.
+| Issue | Problem | Solution |
+|-------|---------|----------|
+| Small expected counts | Invalid test | Combine categories |
+| Ignoring assumptions | Unreliable results | Check all conditions |
+| Overinterpreting | False conclusions | Consider context |
 
 ## Related Topics
-- [[Mainfolder/Statistics/Hypothesis Testing for Proportions\|Hypothesis Testing for Proportions]]
-- [[Mainfolder/Statistics/Probability Distributions\|Probability Distributions]]
-- [[Mainfolder/Statistics/Critical Values\|Critical Values]]
-- [[Mainfolder/Statistics/Tables\|Tables]] 
+* [[Mainfolder/Statistics/Hypothesis Testing Basics\|Hypothesis Testing Basics]] - Foundation for understanding tests
+* [[Mainfolder/Statistics/Types of Hypothesis Tests\|Types of Hypothesis Tests]] - Choosing appropriate test
+* [[Mainfolder/Statistics/Statistical Significance\|Statistical Significance]] - Interpreting results
+* [[P-value\|P-value]] - Understanding test outcomes
+* [[Contingency Tables\|Contingency Tables]] - Analyzing categorical data
+* [[Mainfolder/Statistics/degrees of freedom\|Degrees of Freedom]] - Understanding test parameters
+* [[Mainfolder/Statistics/Effect Size\|Effect Size]] - Measuring practical importance
+* [[Mainfolder/Statistics/Sample Size\|Sample Size]] - Planning adequate samples
+* [[Multiple Comparisons\|Multiple Comparisons]] - Handling multiple tests
+* [[Mainfolder/Statistics/ANOVA\|ANOVA]] - Alternative for multiple groups 

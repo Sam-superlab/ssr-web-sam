@@ -7,33 +7,75 @@
 
 This is the main hub for hypothesis testing topics. The content has been organized into several focused files for better navigation and understanding.
 
-## Main Topics
+## Core Concepts
 
 1. [[Mainfolder/Statistics/Hypothesis Testing Basics\|Hypothesis Testing Basics]]
    * Introduction to hypothesis testing
    * Core components and hypotheses
    * General outline of the testing process
+   * Court case analogy for understanding
+   * Examples of hypothesis testing questions
 
 2. [[Mainfolder/Statistics/Hypothesis Testing Key Concepts\|Hypothesis Testing Key Concepts]]
    * Null distribution
    * Test statistics
    * P-values and their interpretation
+   * Significance levels
+   * Type I and Type II errors
 
-3. [[Mainfolder/Statistics/Hypothesis Testing for Proportions\|Hypothesis Testing for Proportions]]
+3. [[Mainfolder/Statistics/Hypothesis Testing Procedure\|Hypothesis Testing Procedure]]
+   * Step-by-step process
+   * Data collection and conditions
+   * Test statistic calculation
+   * P-value determination
+   * Decision making process
+
+4. [[Mainfolder/Statistics/Types of Hypothesis Tests\|Types of Hypothesis Tests]]
+   * Test selection framework
+   * Tests for proportions
+   * Tests for means
+   * Decision guide
+   * Best practices
+
+## Specific Tests
+
+5. [[Mainfolder/Statistics/Hypothesis Testing for Proportions\|Hypothesis Testing for Proportions]]
    * Single population proportion tests
    * Difference of two population proportions tests
+   * Conditions for valid tests
+   * Z-test for proportions
 
-4. [[Mainfolder/Statistics/Hypothesis Testing for Means\|Hypothesis Testing for Means]]
+6. [[Mainfolder/Statistics/Hypothesis Testing for Means\|Hypothesis Testing for Means]]
    * Single population mean tests
    * Difference of two population means tests
+   * T-tests and Z-tests
+   * Paired and independent samples
 
-5. [[Mainfolder/Statistics/Decision Making\|Decision Making]]
-   * Decision making process
-   * P-value and decision making
-
-6. [[Mainfolder/Statistics/Chi-Square Tests\|Chi-Square Tests]]
+7. [[Mainfolder/Statistics/Chi-Square Tests\|Chi-Square Tests]]
    * Chi-square tests for independence
    * Chi-square tests for goodness of fit
+   * Contingency tables
+   * Expected counts
+
+8. [[Mainfolder/Statistics/ANOVA\|ANOVA]]
+   * One-way ANOVA
+   * Multiple comparison tests
+   * F-distribution
+   * Assumptions and conditions
+
+## Decision Making and Errors
+
+9. [[Mainfolder/Statistics/Decision Making\|Decision Making]]
+   * Decision making process
+   * P-value and decision making
+   * Statistical vs practical significance
+   * Strength of evidence approach
+
+10. [[Mainfolder/Statistics/Type I and Type II Errors\|Type I and Type II Errors]]
+    * Understanding error types
+    * Error probabilities
+    * Power of a test
+    * Sample size considerations
 
 ## Related Topics
 * [[Mainfolder/Statistics/Central Limit Theorem\|Central Limit Theorem]] - Understanding the theoretical foundation for hypothesis testing
@@ -45,3 +87,11 @@ This is the main hub for hypothesis testing topics. The content has been organiz
 * [[Mainfolder/Statistics/Normal Distribution\|Normal Distribution]] - Common distribution for test statistics
 * [[Mainfolder/Statistics/t-distribution\|t-distribution]] - Used in hypothesis testing for means when population standard deviation is unknown
 * [[Mainfolder/Statistics/Bootstrap\|Bootstrap]] - Alternative approach to hypothesis testing using resampling
+* [[Mainfolder/Statistics/Statistical Significance\|Statistical Significance]] - Understanding what makes results significant
+* [[Mainfolder/Statistics/Variance\|Variance]] - Important concept in hypothesis testing
+* [[Mainfolder/Statistics/Independence\|Independence]] - Key assumption in many statistical tests
+* [[Mainfolder/Statistics/Power Analysis\|Power Analysis]] - Planning for adequate sample size
+* [[Multiple Comparisons\|Multiple Comparisons]] - Handling multiple tests
+* [[P-hacking\|P-hacking]] - Understanding and avoiding data manipulation
+* [[Mainfolder/Statistics/Effect Size\|Effect Size]] - Measuring practical importance
+* [[Mainfolder/Statistics/Sample Size\|Sample Size]] - Impact on test power and error rates

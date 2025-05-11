@@ -4,6 +4,70 @@
 
 # Hypothesis Testing Key Concepts
 
+## Purpose and Rationale
+
+### Why These Concepts Matter
+The key concepts in hypothesis testing serve several essential purposes:
+
+1. **Understanding Test Mechanics**
+   * Test statistics quantify the evidence against the null hypothesis
+   * Null distributions provide the theoretical framework for decision-making
+   * P-values measure the strength of evidence in a standardized way
+
+2. **Making Valid Inferences**
+   * Proper test selection ensures appropriate analysis
+   * Understanding conditions ensures valid results
+   * Error control helps manage decision risks
+
+3. **Interpreting Results Correctly**
+   * Clear framework for decision-making
+   * Standardized way to communicate findings
+   * Basis for comparing different studies
+
+### The Rationale Behind Key Concepts
+
+1. **Test Statistics**
+   * Why we need them:
+     * Standardize different types of evidence
+     * Account for sample size and variability
+     * Provide a common scale for comparison
+     * Quantify deviation from null hypothesis
+     * Simplify evaluation without full simulation
+   * How they work:
+     * Measure distance from null hypothesis
+     * Account for sampling variability
+     * Follow known probability distributions
+     * Convert raw differences to standardized units
+     * Enable probability calculations
+
+2. **Null Distributions**
+   * Why they're important:
+     * Provide the theoretical basis for p-values
+     * Help understand what to expect by chance
+     * Enable calculation of probabilities
+     * Define what constitutes "extreme" results
+     * Allow for standardized decision making
+   * How they're used:
+     * Define what "extreme" means
+     * Determine critical values
+     * Calculate p-values
+     * Guide test statistic interpretation
+     * Support decision making
+
+3. **Error Control**
+   * Why it matters:
+     * Helps manage decision risks
+     * Provides framework for sample size planning
+     * Enables comparison of different studies
+     * Balances Type I and Type II errors
+     * Guides practical decision making
+   * How it works:
+     * Balances Type I and Type II errors
+     * Considers practical consequences
+     * Guides decision thresholds
+     * Helps determine sample sizes
+     * Supports risk management
+
 ## Test Selection Guide
 
 | Question Type | Test to Use | Key Conditions |
@@ -14,6 +78,49 @@
 | Difference in Proportions | Two-proportion z-test | Independent samples |
 
 ## Test Statistics and Evidence
+
+### Purpose of Test Statistics
+
+| Aspect | Description | Importance |
+|--------|-------------|------------|
+| Standardization | Converts raw differences to common scale | Enables comparison across studies |
+| Evidence Quantification | Measures strength of evidence against H₀ | Provides objective basis for decisions |
+| Variability Accounting | Incorporates sample size and spread | Ensures valid inference |
+| Distribution Basis | Links to known probability distributions | Enables p-value calculation |
+
+### Understanding P-values
+
+| Concept | Description | Key Points |
+|---------|-------------|------------|
+| Definition | Probability of more extreme results under H₀ | *Not* probability H₀ is true |
+| Interpretation | Strength of evidence against H₀ | Smaller p-value = stronger evidence |
+| Calculation | Based on test statistic and null distribution | Depends on Hₐ direction |
+| Usage | Two approaches: | 1. Strength of evidence<br>2. Decision making |
+
+### P-value Interpretation Framework
+
+| Approach | Method | When to Use |
+|----------|--------|------------|
+| Strength of Evidence | Direct p-value interpretation | Research reporting |
+| Decision Making | Compare to α level | Practical applications |
+
+### P-value Guidelines
+
+| P-value Range | Traditional Interpretation | Better Practice |
+|---------------|---------------------------|----------------|
+| $p < 0.01$ | Strong evidence | Report exact p-value |
+| $0.01 \leq p < 0.05$ | Moderate evidence | Consider practical significance |
+| $0.05 \leq p < 0.10$ | Weak evidence | Discuss uncertainty |
+| $p \geq 0.10$ | No evidence | Note limitations |
+
+### Common Misconceptions About P-values
+
+| Misconception | Reality | Explanation |
+|---------------|---------|-------------|
+| P-value = probability H₀ is true | False | P-value assumes H₀ is true |
+| P-value = probability of random chance | False | P-value is conditional on H₀ |
+| Small p-value proves Hₐ | False | Only provides evidence against H₀ |
+| Large p-value proves H₀ | False | Only indicates insufficient evidence |
 
 ### Anatomy of Test Statistics
 
@@ -53,15 +160,6 @@
 | Significance Level | $\alpha$ | 0.05, 0.01 | Type I error rate |
 | Power | $1-\beta$ | 0.80, 0.90 | Correct rejection rate |
 | Sample Size | $n$ | Varies | Affects both errors |
-
-### P-value Guidelines
-
-| P-value Range | Traditional Interpretation | Better Practice |
-|---------------|---------------------------|----------------|
-| $p < 0.01$ | Strong evidence | Report exact p-value |
-| $0.01 \leq p < 0.05$ | Moderate evidence | Consider practical significance |
-| $0.05 \leq p < 0.10$ | Weak evidence | Discuss uncertainty |
-| $p \geq 0.10$ | No evidence | Note limitations |
 
 ## Best Practices
 

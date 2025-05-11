@@ -5,93 +5,161 @@
 
 # Decision Making in Hypothesis Testing
 
-Hypothesis testing offers a formal framework for answering binary questions using data. While one approach focuses on describing the strength of evidence against a null hypothesis ($H_0$), an alternative and historically common approach focuses on making a definitive decision.
+## Purpose and Rationale
 
-## 1. The Core Decision
+### Core Purpose
+The decision-making approach in hypothesis testing serves several essential purposes:
 
-Based on the collected data and analysis, the ultimate goal in this approach is to make one of two decisions:
+1. **Formal Decision Framework**
+   * Provides a structured procedure for choosing between competing hypotheses
+   * Establishes clear rules for making statistical decisions
+   * Enables consistent interpretation of results across studies
 
-1. **Reject $H_0$**: There is sufficient evidence to reject the null hypothesis in favor of the alternative hypothesis ($H_a$). This suggests the observed data seems unlikely if $H_0$ were true.
-2. **Fail to Reject $H_0$**: There is *not* sufficient evidence to reject the null hypothesis. This suggests the observed data largely agrees with $H_0$.
+2. **Error Control**
+   * Helps manage the risk of incorrect decisions
+   * Provides a framework for controlling Type I errors
+   * Enables planning for appropriate sample sizes
 
-## 2. Potential Errors in Decision Making
+3. **Practical Applications**
+   * Supports decision-making in research and business
+   * Guides policy and intervention decisions
+   * Helps in quality control and process improvement
 
-Just like [[Mainfolder/Statistics/Confidence Interval\|Confidence Interval]] can be correct or incorrect, decisions in hypothesis testing can also be wrong. There are two specific ways a decision can be incorrect:
+### The Rationale Behind Decision Making
 
-### Type I Error
-- **Definition**: Rejecting the null hypothesis ($H_0$) when $H_0$ is actually TRUE
-- **Analogy**: A "False positive"
-- **Example**: Concluding a new drug works when it actually doesn't
-- **Rate**: Controlled by the significance level, denoted by $\alpha$ (alpha)
+1. **Why We Need Formal Decisions**
+   * Research and business often require clear yes/no decisions
+   * Need to balance evidence with practical constraints
+   * Provides a framework for action when evidence is sufficient
 
-### Type II Error
-- **Definition**: Failing to reject $H_0$ when $H_0$ is actually FALSE
-- **Analogy**: A "False negative"
-- **Example**: An effective drug is deemed ineffective
-- **Rate**: Denoted by $\beta$ (beta)
+2. **Why Use Significance Levels**
+   * Controls the rate of false positive errors
+   * Provides a standardized approach to decision making
+   * Enables comparison across different studies
 
-### Summary Table of Decisions and Errors
+3. **Why Consider Both Types of Errors**
+   * Type I errors (false positives) can lead to unnecessary actions
+   * Type II errors (false negatives) can miss important effects
+   * Need to balance both types of errors based on context
 
-| True State of Nature | Test Result          | $H_0$ True              | $H_0$ False             |
-| :------------------- | :------------------- | :---------------------- | :---------------------- |
-|                      | Fail to reject $H_0$ | Correct $(1-\alpha)$    | Type II Error $(\beta)$ |
-|                      | Reject $H_0$         | Type I Error $(\alpha)$ | Correct $(1-\beta)$     |
+## The Decision Making Process
 
-## 3. Power
+### Setting the Significance Level (α)
 
-- **Definition**: Probability of *correctly* rejecting a false null hypothesis
-- **Calculation**: Power = $1 - \beta$
-- **Factors influencing power**:
-  - Sample Size
-  - Effect Size
-  - Data Variability
+| Aspect | Description | Considerations |
+|--------|-------------|----------------|
+| Definition | Pre-determined threshold for p-value | Usually 0.05 or 0.01 |
+| Purpose | Controls Type I error rate | Should be context-dependent |
+| Common Values | 0.05, 0.01, 0.10 | Consider consequences of errors |
 
-## 4. The Decision Rule
+### Step-by-Step Process
 
-The decision is made by comparing the calculated p-value to the pre-determined significance level ($\alpha$):
-- If p-value $\leq \alpha$: Reject $H_0$
-- If p-value $> \alpha$: Fail to reject $H_0$
+1. **Pre-Analysis Steps**
+   * Set significance level (α)
+   * Define null and alternative hypotheses
+   * Determine required sample size
+   * Plan analysis approach
 
-## 5. Making Conclusions
+2. **Data Collection and Analysis**
+   * Gather random sample
+   * Check necessary conditions
+   * Calculate test statistic
+   * Determine p-value
 
-A conclusion should typically include:
-- The value of the test-statistic (e.g., Z or T) and the p-value
-- A statement on whether $H_0$ is rejected or failed to be rejected
-- An interpretation in the context of the original research question
+3. **Decision Making**
+   * Compare p-value to α
+   * Make decision (reject/fail to reject H₀)
+   * Consider practical significance
+   * State conclusion in context
 
-## 6. Issues and Criticisms
+### Decision Rules
 
-### Arbitrary Significance Levels
-- Common use of $\alpha = 0.05$ is historical convention
-- Little practical difference between p-values slightly above or below 0.05
+| Condition | Decision | Interpretation |
+|-----------|----------|----------------|
+| p-value ≤ α | Reject H₀ | Sufficient evidence against H₀ |
+| p-value > α | Fail to reject H₀ | Insufficient evidence against H₀ |
+
+## Types of Errors
+
+### Error Types and Consequences
+
+| Error Type | Definition | Probability | Consequences |
+|------------|------------|-------------|--------------|
+| Type I (α) | Reject true H₀ | α | False positive, unnecessary action |
+| Type II (β) | Fail to reject false H₀ | β | False negative, missed opportunity |
+
+### Error Control
+
+| Aspect | Description | How to Control |
+|--------|-------------|----------------|
+| Type I Error | False positive rate | Set α level |
+| Type II Error | False negative rate | Increase sample size |
+| Power | 1 - β | Plan sample size |
+
+## Important Considerations
 
 ### Statistical vs. Practical Significance
-- Rejecting $H_0$ indicates statistical significance
-- Does not automatically mean practical significance
-- Large sample sizes can make tiny differences statistically significant
 
-### File Drawer Effect
-- Research with "not significant" results may go unpublished
-- Biases published literature towards positive results
+| Aspect | Statistical | Practical |
+|--------|-------------|-----------|
+| Focus | P-value and α | Effect size and context |
+| Question | Is there an effect? | Is the effect important? |
+| Dependence | Sample size | Real-world impact |
 
-### P-hacking
-- Manipulating data or analysis to increase chance of significant p-value
-- Techniques include:
-  - Selectively removing outliers
-  - Increasing sample size until significance is reached
-  - Running many tests and only reporting significant ones
+### Common Issues and Solutions
 
-### Multiple Comparisons
-- Conducting many hypothesis tests increases overall probability of Type I error
-- If 8 independent tests at $\alpha = 0.05$, chance of at least one false positive $\approx 33.6\%$
+| Issue | Problem | Solution |
+|-------|---------|----------|
+| Arbitrary α | Rigid cutoff may not fit context | Adjust based on consequences |
+| Multiple Testing | Increased Type I error | Adjust α or use corrections |
+| P-hacking | Data manipulation for significance | Pre-specify analyses |
+| Publication Bias | Only significant results published | Report all studies |
 
-## 7. Alternative Approach
+### Best Practices
 
-Many statisticians increasingly favor the "strength of evidence" approach, which focuses on interpreting the p-value as a continuous measure of evidence against $H_0$ rather than making a strict reject/fail-to-reject decision based on an arbitrary $\alpha$ cutoff.
+1. **Before Analysis**
+   * Pre-specify hypotheses and analyses
+   * Choose appropriate α level
+   * Plan sample size for desired power
+   * Consider practical significance
+
+2. **During Analysis**
+   * Check all assumptions
+   * Calculate effect size
+   * Consider confidence intervals
+   * Document all decisions
+
+3. **After Analysis**
+   * Report exact p-values
+   * Include effect sizes
+   * Discuss practical significance
+   * Consider limitations
+
+## Alternative Approaches
+
+### Strength of Evidence Approach
+
+| Aspect | Description | Advantages |
+|--------|-------------|------------|
+| Focus | P-value interpretation | More nuanced understanding |
+| Decision | Based on evidence strength | Less arbitrary |
+| Reporting | Exact p-values | More informative |
+
+### Complementary Methods
+
+| Method | Purpose | When to Use |
+|--------|---------|------------|
+| Confidence Intervals | Estimate precision | Always report |
+| Effect Size | Measure importance | Always calculate |
+| Power Analysis | Plan sample size | Before study |
 
 ## Related Topics
-- [[hypothesis testing\|Hypothesis Testing]]
-- [[Mainfolder/Statistics/Confidence Interval\|Confidence Interval]]
-- [[Mainfolder/Statistics/Statistical Significance\|Statistical Significance]]
-- [[Mainfolder/Statistics/Type I and Type II Errors\|Type I and Type II Errors]]
+* [[Mainfolder/Statistics/Hypothesis Testing Basics\|Hypothesis Testing Basics]] - Foundation for decision making
+* [[Mainfolder/Statistics/Type I and Type II Errors\|Type I and Type II Errors]] - Understanding potential mistakes
+* [[Mainfolder/Statistics/Statistical Significance\|Statistical Significance]] - Understanding what makes results significant
+* [[Mainfolder/Statistics/Effect Size\|Effect Size]] - Measuring practical importance
+* [[Mainfolder/Statistics/Confidence Interval\|Confidence Interval]] - Alternative approach to inference
+* [[Mainfolder/Statistics/Power Analysis\|Power Analysis]] - Planning for adequate sample size
+* [[Multiple Comparisons\|Multiple Comparisons]] - Handling multiple tests
+* [[P-hacking\|P-hacking]] - Understanding and avoiding data manipulation
 

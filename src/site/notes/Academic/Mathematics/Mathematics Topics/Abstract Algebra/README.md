@@ -1,6 +1,7 @@
 ---
-dg-publish: true
+{"dg-publish":true,"permalink":"/Academic/Mathematics/Mathematics Topics/Abstract Algebra/README/"}
 ---
+
 
 # Abstract Algebra Knowledge Base
 

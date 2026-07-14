@@ -18,7 +18,7 @@
 - [[20 Mathematics/Rings\|Rings]]
 - [[20 Mathematics/Field theory\|Field theory]]
 - [[20 Mathematics/Algebra/Commutative Algebra\|Commutative Algebra]]
-  - [[20 Mathematics/Algebra/Commutative Algebra/Atiyah-Macdonald/Atiyah-Macdonald Home\|Atiyah-Macdonald course notes]]
+  - [[20 Mathematics/Algebra/Commutative Algebra/Sources/Atiyah-Macdonald/Atiyah-Macdonald Reading Guide\|Atiyah-Macdonald source notes]]
 - [[20 Mathematics/Number theory\|Number theory]]
 - [[20 Mathematics/Linear Algebra\|Linear Algebra]]
 - [[20 Mathematics/Modular forms\|Modular forms]]
